@@ -21,11 +21,12 @@
     <!-- Header -->
     <header class="header">
       <nav class="main-nav">
-        <div class="container">
-          <div class="nav-content">
+        <section class="container">
+          <section class="nav-content">
             <a class="logo" href="#">
               <img src="img/logo.png" alt="Flatsome Logo" />
             </a>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
             <ul class="menu">
               <li><a href="#" class="active">HOME</a></li>
               <li><a href="#">FEATURES</a></li>
@@ -34,29 +35,32 @@
               <li><a href="#">BLOG</a></li>
               <li><a href="#">ELEMENTS</a></li>
             </ul>
-            <div class="nav-icons">
+            <aside class="nav-icons">
               <i class="fas fa-search"></i>
               <i class="fas fa-heart"></i>
               <i class="fas fa-shopping-bag"></i>
-            </div>
-          </div>
-        </div>
+              <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+              </label>
+            </aside>
+          </section>
+        </section>
       </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" aria-label="Hero">
-      <div class="hero-content">
+      <header class="hero-content">
         <h1>CHANGE THIS<br />TO ANYTHING</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipiscing elit, sed diam
           nonumy eiusmod tempor incididunt ut labore et dolore magna.
         </p>
-        <div class="hero-buttons">
+        <nav class="hero-buttons">
           <a href="#" class="btn-primary">SHOP MEN</a>
           <a href="#" class="btn-secondary">SHOP WOMEN</a>
-        </div>
-      </div>
+        </nav>
+      </header>
     </section>
 
     <!-- Features Bar -->
@@ -98,9 +102,9 @@
           <ul class="product-grid">
             <li>
               <article class="product-card">
-                <figure class="product-image">
+                <div class="product-image">
                   <img src="img/girl.jpeg" alt="On1 Jersey UNIF-2" />
-                </figure>
+                </div>
                 <div class="product-info">
                   <span class="product-category">SWEATERS</span>
                   <h3 class="product-name">On1 Jersey UNIF-2</h3>
@@ -111,9 +115,9 @@
             </li>
             <li>
               <article class="product-card">
-                <figure class="product-image">
+                <div class="product-image">
                   <img src="img/dude.jpeg" alt="Osaka Entry Tee Superfry 12" />
-                </figure>
+                </div>
                 <div class="product-info">
                   <span class="product-category">MEN</span>
                   <h3 class="product-name">Osaka Entry Tee Superfry 12</h3>
@@ -124,9 +128,9 @@
             </li>
             <li>
               <article class="product-card">
-                <figure class="product-image">
+                <div class="product-image">
                   <img src="img/shoes.jpeg" alt="All Star Canvas Hi Converse" />
-                </figure>
+                </div>
                 <div class="product-info">
                   <span class="product-category">SHOES</span>
                   <h3 class="product-name">All Star Canvas Hi Converse</h3>
@@ -137,12 +141,12 @@
             </li>
             <li>
               <article class="product-card">
-                <figure class="product-image">
+                <div class="product-image">
                   <img
                     src="img/woman.jpeg"
                     alt="Fluro Bis Pullover Designers Remix"
                   />
-                </figure>
+                </div>
                 <div class="product-info">
                   <span class="product-category">SWEATERS</span>
                   <h3 class="product-name">
@@ -203,13 +207,13 @@
           <ul class="news-grid">
             <li>
               <article class="news-item">
-                <figure class="news-image">
+                <div class="news-image">
                   <img src="img/tablet.jpg" alt="News" />
-                  <figcaption class="news-date">
-                    <span class="day">19</span>
-                    <span class="month">Oct</span>
-                  </figcaption>
-                </figure>
+                </div>
+                <div class="news-date">
+                  <span class="day">19</span>
+                  <span class="month">Oct</span>
+                </div>
                 <div class="news-content">
                   <h3>WELCOME TO FLATSOME</h3>
                   <p>
@@ -221,13 +225,13 @@
             </li>
             <li>
               <article class="news-item">
-                <figure class="news-image">
+                <div class="news-image">
                   <img src="img/dude.jpeg" alt="News" />
-                  <figcaption class="news-date">
-                    <span class="day">13</span>
-                    <span class="month">Oct</span>
-                  </figcaption>
-                </figure>
+                </div>
+                <div class="news-date">
+                  <span class="day">13</span>
+                  <span class="month">Oct</span>
+                </div>
                 <div class="news-content">
                   <h3>JUST ANOTHER POST WITH A GALLERY</h3>
                   <p>
@@ -239,13 +243,13 @@
             </li>
             <li>
               <article class="news-item">
-                <figure class="news-image">
+                <div class="news-image">
                   <img src="img/chill.jpg" alt="News" />
-                  <figcaption class="news-date">
-                    <span class="day">13</span>
-                    <span class="month">Oct</span>
-                  </figcaption>
-                </figure>
+                </div>
+                <div class="news-date">
+                  <span class="day">13</span>
+                  <span class="month">Oct</span>
+                </div>
                 <div class="news-content">
                   <h3>A SIMPLE BLOG POST</h3>
                   <p>
@@ -257,13 +261,13 @@
             </li>
             <li>
               <article class="news-item">
-                <figure class="news-image">
+                <div class="news-image">
                   <img src="img/sitting.jpg" alt="News" />
-                  <figcaption class="news-date">
-                    <span class="day">01</span>
-                    <span class="month">Jan</span>
-                  </figcaption>
-                </figure>
+                </div>
+                <div class="news-date">
+                  <span class="day">01</span>
+                  <span class="month">Jan</span>
+                </div>
                 <div class="news-content">
                   <h3>A VIDEO BLOG POST</h3>
                   <p>
