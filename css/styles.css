@@ -798,6 +798,62 @@ body {
   }
 }
 
+/* ==========================
+   Responsive: Burger mobile
+   ========================== */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 0;
+  }
+
+  .header .main-nav {
+    align-items: center;
+  }
+
+  .header .nav-left {
+    gap: 12px;
+  }
+
+  .header .menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(10,10,10,0.97);
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0;
+    z-index: 1001;
+  }
+
+  .header .menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--white);
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .header .nav-right .menu-toggle {
+    display: block;
+  }
+
+  .header .nav-right .login,
+  .header .nav-right .cart-link,
+  .header .search-form {
+    display: none;
+  }
+
+  /* show menu when checkbox is checked */
+  .menu-checkbox:checked ~ .menu {
+    display: flex;
+  }
+
+  /* improve spacing for logo */
+  .header .logo-text { font-size: 16px; }
+}
+
 /* ========================================
    FOOTER PRODUCTS
    ======================================== */

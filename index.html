@@ -36,7 +36,7 @@
             </form>
             <!-- checkbox para controlar el menú móvil -->
             <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
-            <ul class="menu">
+            <ul class="menu" id="main-menu">
               <li><a href="#">DEMOS <i class="fas fa-chevron-down"></i></a></li>
               <li><a href="#">FEATURES <i class="fas fa-chevron-down"></i></a></li>
               <li><a href="#">SHOP <i class="fas fa-chevron-down"></i></a></li>
@@ -52,8 +52,9 @@
               CART / $0.00
               <span class="cart-count">0</span>
             </a>
-            <label for="menu-toggle" class="menu-toggle">
-              <i class="fas fa-bars"></i>
+            <label for="menu-toggle" class="menu-toggle" aria-controls="main-menu" aria-label="Abrir menú" aria-expanded="false">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+              <span class="sr-only">Abrir menú</span>
             </label>
           </div>
         </nav>
@@ -612,5 +613,34 @@
         </div>
       </div>
     </footer>
+    <script>
+      (function(){
+        const checkbox = document.getElementById('menu-toggle');
+        const menu = document.getElementById('main-menu');
+        const toggleLabel = document.querySelector('label[for="menu-toggle"].menu-toggle');
+
+        function updateAria(){
+          if(!toggleLabel) return;
+          toggleLabel.setAttribute('aria-expanded', checkbox && checkbox.checked ? 'true' : 'false');
+        }
+
+        // Close menu when clicking a link
+        document.addEventListener('click', function(e){
+          if(!checkbox) return;
+          if(e.target.closest && e.target.closest('#main-menu a')){
+            checkbox.checked = false;
+            updateAria();
+          }
+        });
+
+        // Update aria on change
+        if(checkbox){
+          checkbox.addEventListener('change', updateAria);
+        }
+
+        // ensure aria reflects initial state
+        updateAria();
+      })();
+    </script>
   </body>
 </html>
