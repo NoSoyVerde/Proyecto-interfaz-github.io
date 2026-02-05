@@ -52,8 +52,8 @@
               CART / $0.00
               <span class="cart-count">0</span>
             </a>
-            <label for="menu-toggle" class="menu-toggle" aria-controls="main-menu" aria-label="Abrir menú" aria-expanded="false">
-              <i class="fas fa-bars" aria-hidden="true"></i>
+            <label for="menu-toggle" class="menu-toggle">
+              <span class="burger-lines"></span>
               <span class="sr-only">Abrir menú</span>
             </label>
           </div>
@@ -596,10 +596,10 @@
         <div class="container">
           <div class="footer-bottom-content">
             <ul class="payment-methods">
-              <li><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" /></li>
-              <li><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" /></li>
-              <li><img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" /></li>
-              <li><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" /></li>
+              <li><img src="img/Visa_Inc._logo.svg" alt="Visa" /></li>
+              <li><img src="img/PayPal.svg" alt="PayPal" /></li>
+              <li><img src="img/Stripe_Logo,_revised_2016.svg" alt="Stripe" /></li>
+              <li><img src="img/Mastercard-logo.svg" alt="Mastercard" /></li>
             </ul>
             <nav class="footer-nav">
               <a href="#">ABOUT</a>
@@ -613,34 +613,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      (function(){
-        const checkbox = document.getElementById('menu-toggle');
-        const menu = document.getElementById('main-menu');
-        const toggleLabel = document.querySelector('label[for="menu-toggle"].menu-toggle');
-
-        function updateAria(){
-          if(!toggleLabel) return;
-          toggleLabel.setAttribute('aria-expanded', checkbox && checkbox.checked ? 'true' : 'false');
-        }
-
-        // Close menu when clicking a link
-        document.addEventListener('click', function(e){
-          if(!checkbox) return;
-          if(e.target.closest && e.target.closest('#main-menu a')){
-            checkbox.checked = false;
-            updateAria();
-          }
-        });
-
-        // Update aria on change
-        if(checkbox){
-          checkbox.addEventListener('change', updateAria);
-        }
-
-        // ensure aria reflects initial state
-        updateAria();
-      })();
-    </script>
   </body>
 </html>
