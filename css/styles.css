@@ -467,6 +467,26 @@ body {
   text-transform: uppercase;
 }
 
+/* Decorative horizontal lines to left and right of the section title (like the reference) */
+.latest-news h2 {
+  position: relative;
+  display: inline-block;
+  padding: 0 18px;
+}
+.latest-news h2::before,
+.latest-news h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 38vw;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.latest-news h2::before { left: -44vw; }
+.latest-news h2::after { right: -44vw; }
+
 /* ========================================
    PRODUCTS
    ======================================== */
@@ -635,6 +655,10 @@ body {
   position: relative;
   height: 280px; /* slightly taller to match reference */
   overflow: hidden;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
 .news-image {
@@ -647,7 +671,13 @@ body {
   height: 100%;
   object-fit: cover;
   /* darken more so overlay text reads better like reference */
-  filter: brightness(0.72);
+  filter: brightness(0.62);
+  transition: transform 0.35s ease, filter 0.25s ease;
+}
+
+.news-item:hover .news-image img {
+  transform: scale(1.04);
+  filter: brightness(0.6);
 }
 
 .news-date {
@@ -658,7 +688,7 @@ body {
   color: var(--white);
   padding: 6px 8px;
   text-align: center;
-  min-width: 36px;
+  min-width: 44px;
   border-radius: 3px;
   box-shadow: 0 2px 0 rgba(0,0,0,0.12);
   z-index: 6;
@@ -703,12 +733,15 @@ body {
   letter-spacing: 1.2px;
   line-height: 1.05;
   z-index: 5;
-  max-width: 200px;
+  max-width: 260px;
   padding: 0 8px;
   text-shadow: 0 3px 8px rgba(0,0,0,0.75);
   word-break: break-word;
   transform: translateY(6px); /* nudge title slightly down from center */
 }
+
+.news-content h3 a { color: inherit; text-decoration: none; display: inline-block; }
+.news-content h3 a:hover { text-decoration: none; opacity: 0.95; }
 
 .news-content p {
   /* center excerpt under title (no auto margin) */
@@ -716,7 +749,7 @@ body {
   font-size: 12px;
   color: rgba(255,255,255,0.95);
   line-height: 1.45;
-  max-width: 220px;
+  max-width: 260px;
   z-index: 5;
   text-shadow: 0 1px 3px rgba(0,0,0,0.7);
   margin-top: 10px;
@@ -1366,6 +1399,10 @@ body {
     text-align: center;
     margin-left: 0;
   }
+
+  /* hide decorative lines on smaller screens to avoid overflow */
+  .latest-news h2::before,
+  .latest-news h2::after { display: none; }
 
   /* GALLERY */
   .gallery-grid {
