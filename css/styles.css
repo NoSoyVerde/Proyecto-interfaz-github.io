@@ -194,23 +194,55 @@ body {
    ======================================== */
 .hero {
   height: 100vh;
-  min-height: 600px;
+  min-height: 720px;
   background: url("../img/surfing-3.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
   color: var(--white);
 }
 
 .hero-container {
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
 }
 
 .hero-content {
   max-width: 700px;
-  margin: 0 auto;
+  text-align: center;
+}
+
+/* Align hero title, first product and section titles to the same left column on wide screens
+   Product grid max-width is 1000px inside the .container (1200px). The left gutter is (1200-1000)/2 = 100px.
+   Apply a 100px left offset to hero content and section headings on desktop so they line up with the product grid. */
+@media (min-width: 1001px) {
+  /* Keep hero title centered, but align section headings with the product grid */
+  /* center the hero block, then nudge the whole block slightly left so the
+     H1, paragraph and buttons remain centered together but visually a bit
+     to the left to align with the grid */
+  .hero-content {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transform: translateX(-100px);
+  }
+
+  .hero-content h1 {
+    font-size: 4.8rem;
+    letter-spacing: 6px;
+    display: inline-block;
+    /* nudge the text itself slightly more left so the visual start aligns */
+    transform: translateX(-30px);
+  }
+
+  .products-section h2,
+  .browse-section h2,
+  .latest-news h2 {
+    text-align: left;
+    margin-left: 100px;
+  }
 }
 
 .hero-content h1 {
@@ -218,6 +250,7 @@ body {
   font-weight: 300;
   line-height: 1.15;
   margin-bottom: 25px;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-style: italic;
@@ -229,8 +262,6 @@ body {
   margin-bottom: 35px;
   opacity: 0.9;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
   line-height: 1.7;
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
@@ -238,23 +269,20 @@ body {
 .hero-buttons {
   display: flex;
   gap: 15px;
-  justify-content: center;
 }
-
 .btn-outline {
-  padding: 12px 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
-  border: 2px solid var(--white);
-  font-size: 11px;
   background: transparent;
   color: var(--white);
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
 }
 
 .btn-outline i {
@@ -264,6 +292,20 @@ body {
 .btn-outline:hover {
   background: var(--white);
   color: #333;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-section p {
+  font-size: 13px;
+  color: #bfbfbf;
+  margin-bottom: 18px;
+  line-height: 1.7;
+  max-width: 260px;
 }
 
 /* Hero Navigation Arrows */
@@ -330,101 +372,107 @@ body {
    FEATURES BAR
    ======================================== */
 .features-bar {
-  background: var(--white);
-  padding: 30px 0;
-  border-bottom: 1px solid #eee;
+  background: #1a1a1a;
+  padding: 40px 0;
+  border-bottom: none;
 }
 
 .features-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
   list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  color: #333;
+  gap: 12px;
+  color: var(--white);
 }
 
 .feature-icon {
-  width: 50px;
-  height: 50px;
-  border: 2px solid #333;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .feature-icon i {
-  font-size: 18px;
-  color: #333;
+  font-size: 14px;
+  color: var(--white);
 }
 
 .feature-text {
   text-align: left;
+  line-height: 1.4;
 }
 
 .feature-text strong {
   display: block;
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 1px;
 }
 
 .feature-text span {
-  font-size: 13px;
-  color: #666;
+  font-size: 11px;
+  color: #bbb;
 }
 
 /* ========================================
    SECTIONS COMUNES
    ======================================== */
 .products-section {
-  padding: 60px 0;
-  background: var(--white);
+  padding: 50px 0;
+  background: #1a1a1a;
 }
 
 .products-section h2 {
   text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  color: #333;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 .browse-section {
-  padding: 60px 0;
-  background: var(--dark-sec);
+  padding: 50px 0;
+  background: #2c2c2c;
 }
 
 .browse-section h2 {
   text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 40px;
+  font-size: 1.3rem;
+  margin-bottom: 35px;
   color: var(--white);
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 .latest-news {
-  padding: 60px 0;
-  background: var(--dark-sec);
+  padding: 50px 0;
+  background: #2c2c2c;
 }
 
 .latest-news h2 {
   text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 40px;
+  font-size: 1.3rem;
+  margin-bottom: 35px;
   color: var(--white);
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
@@ -434,8 +482,10 @@ body {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 15px;
   list-style: none;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .product-grid li {
@@ -445,10 +495,12 @@ body {
 .product-card {
   background: var(--white);
   overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 0;
 }
 
 .product-image {
-  height: 280px;
+  height: 260px;
   overflow: hidden;
 }
 
@@ -468,25 +520,26 @@ body {
 }
 
 .product-info {
-  padding: 15px 5px;
+  padding: 12px 8px;
   text-align: left;
   background: var(--white);
 }
 
 .product-category {
   display: block;
-  font-size: 11px;
+  font-size: 10px;
   color: #999;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .product-name {
-  font-size: 13px;
+  font-size: 12px;
   color: #333;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-weight: 400;
+  line-height: 1.3;
 }
 
 .product-rating {
@@ -494,7 +547,7 @@ body {
 }
 
 .product-price {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: #333;
 }
@@ -505,8 +558,10 @@ body {
 .browse-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
+  gap: 10px;
   list-style: none;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .browse-grid li {
@@ -515,7 +570,7 @@ body {
 
 .browse-item {
   position: relative;
-  height: 160px;
+  height: 140px;
   overflow: hidden;
 }
 
@@ -538,10 +593,10 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--white);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   margin: 0;
   transition: background 0.3s ease;
 }
@@ -556,8 +611,10 @@ body {
 .news-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 15px;
   list-style: none;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .news-grid li {
@@ -566,7 +623,7 @@ body {
 
 .news-item {
   position: relative;
-  height: 280px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -618,87 +675,92 @@ body {
 }
 
 .news-content h3 {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--white);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  line-height: 1.4;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
 }
 
 .news-content p {
-  font-size: 12px;
+  font-size: 11px;
   color: rgba(255,255,255,0.8);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ========================================
    NEWSLETTER
    ======================================== */
 .newsletter {
-  padding: 120px 0;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  padding: 100px 0 60px;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url("../img/yoga-girl.jpg") center/cover no-repeat;
   text-align: center;
   color: var(--white);
 }
 
 .newsletter h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: 600;
-  letter-spacing: 3px;
+  font-size: 1.9rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .newsletter p {
-  font-size: 14px;
-  margin-bottom: 35px;
-  max-width: 600px;
+  font-size: 13px;
+  margin-bottom: 18px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.9;
-  line-height: 1.7;
+  opacity: 0.95;
+  line-height: 1.6;
 }
 
 .newsletter-form {
   display: flex;
-  max-width: 500px;
+  align-items: center;
+  max-width: 640px;
   margin: 0 auto;
   justify-content: center;
+  gap: 12px;
 }
 
 .newsletter-form input {
-  flex: 1;
-  max-width: 320px;
-  padding: 14px 20px;
+  flex: 1 1 480px;
+  padding: 12px 18px;
   border: none;
   font-size: 13px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.14);
   color: var(--white);
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 24px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
 }
 
 .newsletter-form input::placeholder {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.65);
 }
 
 .newsletter-form button {
-  padding: 14px 30px;
-  background: #2d9cca;
+  padding: 10px 14px;
+  background: #14a6d1;
   color: var(--white);
   border: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.18s ease, transform 0.12s ease;
+  border-radius: 18px;
 }
 
 .newsletter-form button:hover {
-  background: #258db8;
+  background: #0f9cc0;
+  transform: translateY(-1px);
 }
 
 /* ========================================
@@ -719,7 +781,8 @@ body {
 }
 
 .gallery-item {
-  height: 160px;
+  height: 140px;
+  min-height: 140px;
   overflow: hidden;
 }
 
@@ -727,6 +790,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -743,79 +807,124 @@ body {
    FOOTER PRODUCTS
    ======================================== */
 .footer-products {
-  background: #222;
-  padding: 50px 0;
-  border-bottom: 1px solid #333;
+  background: #1a1a1a !important;
+  padding: 40px 0;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 .footer-products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: #1a1a1a !important;
+}
+
+/* Asegurar que los contenedores internos no muestren fondo blanco */
+.footer-products,
+.footer-products .container,
+.footer-products .footer-products-grid,
+.footer-products .product-column,
+.footer-products .product-list {
+  background: #1a1a1a !important;
+  color: var(--white) !important;
+}
+
+/* Forzar que no haya imágenes de fondo ni pseudo-elementos blancos que tapen la sección */
+.footer-products,
+.footer-products *,
+.footer-products::before,
+.footer-products::after,
+.footer-products .container::before,
+.footer-products .container::after {
+  background-image: none !important;
+  background-color: #1a1a1a !important;
+}
+
+.product-column {
+  background: #1a1a1a;
 }
 
 .product-column h2 {
   color: var(--white);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.product-column h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 1px;
+  background: var(--white);
 }
 
 .product-list {
   list-style: none;
+  background: #1a1a1a;
 }
 
 .product-item {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   margin-bottom: 12px;
   align-items: flex-start;
+  background: #1a1a1a;
 }
 
 .product-item img {
-  width: 55px;
-  height: 65px;
+  width: 40px;
+  height: 50px;
   object-fit: cover;
   flex-shrink: 0;
+  border-radius: 0;
 }
 
 .product-item .product-info {
   display: flex;
   flex-direction: column;
+  gap: 2px;
+  flex: 1;
 }
 
 .product-item .product-info strong {
-  font-size: 12px;
+  font-size: 9px;
   color: var(--white);
-  margin-bottom: 4px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .product-item .product-info .stars {
-  color: #f5a623;
-  font-size: 11px;
-  margin-bottom: 4px;
-  letter-spacing: 1px;
+  color: #ffb400;
+  font-size: 8px;
+  letter-spacing: 0.2px;
+  margin-bottom: 1px;
 }
 
 .product-item .product-info .stars .star-empty {
-  color: #666;
+  color: #444;
 }
 
 .product-item .product-info .price {
-  color: #2d9cca;
-  font-size: 13px;
-  font-weight: 600;
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 500;
 }
 
 .product-item .product-info .price-old {
-  color: #666;
-  font-size: 12px;
+  color: #777;
+  font-size: 9px;
   text-decoration: line-through;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 /* ========================================
@@ -843,6 +952,21 @@ body {
   letter-spacing: 1px;
 }
 
+.footer-section h2 {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background: #444;
+}
+
 .footer-section p {
   font-size: 12px;
   color: #999;
@@ -857,61 +981,72 @@ body {
 }
 
 .social-icons li a {
-  width: 38px;
-  height: 38px;
-  background: #444;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   text-decoration: none;
-  font-size: 14px;
-  transition: background 0.3s ease;
+  font-size: 13px;
+  transition: background 0.25s ease, transform 0.15s ease;
 }
 
 .social-icons li a:hover {
   background: #2d9cca;
+  transform: translateY(-2px);
 }
 
 .footer-news {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-news-item {
   display: flex;
-  gap: 12px;
-  margin-bottom: 15px;
+  gap: 14px;
+  margin-bottom: 18px;
   align-items: center;
 }
 
 .news-date-badge {
-  background: #444;
+  background: #3a3a3a;
   color: var(--white);
-  padding: 6px 10px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  min-width: 40px;
+  min-width: 42px;
   flex-shrink: 0;
+  border-radius: 3px;
 }
 
 .news-date-badge .day {
   display: block;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .news-date-badge .month {
   display: block;
-  font-size: 9px;
+  font-size: 10px;
   text-transform: capitalize;
+  opacity: 0.95;
 }
 
 .footer-news-item p {
   margin: 0;
-  font-size: 12px;
-  color: #999;
-  line-height: 1.5;
+  font-size: 13px;
+  color: #bfbfbf;
+  line-height: 1.4;
 }
 
 .tag-cloud {
@@ -929,7 +1064,7 @@ body {
   display: inline-block;
   background: transparent;
   border: 1px solid #555;
-  padding: 5px 10px;
+  padding: 4px 8px;
   font-size: 10px;
   color: #999;
   text-decoration: none;
@@ -946,22 +1081,25 @@ body {
   flex-direction: column;
   gap: 10px;
   margin-top: 15px;
+  align-items: flex-start;
 }
 
 .footer-newsletter input {
-  padding: 12px 15px;
+  padding: 12px 16px;
   border: 1px solid #555;
-  background: transparent;
+  background: #2a2a2a;
   color: var(--white);
   font-size: 12px;
+  border-radius: 22px;
+  width: 240px;
 }
 
 .footer-newsletter input::placeholder {
-  color: #777;
+  color: #888;
 }
 
 .footer-newsletter button {
-  padding: 12px 20px;
+  padding: 10px 18px;
   background: #2d9cca;
   color: var(--white);
   border: none;
@@ -971,6 +1109,7 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
   transition: background 0.3s ease;
+  border-radius: 20px;
   align-self: flex-start;
 }
 
@@ -1001,8 +1140,11 @@ body {
 
 .payment-methods span {
   font-size: 12px;
-  color: #888;
+  color: var(--white);
   font-weight: 500;
+  background: #1b1b1b;
+  padding: 6px 10px;
+  border-radius: 4px;
 }
 
 .payment-visa {
@@ -1087,10 +1229,10 @@ body {
   /* HEADER */
   .menu {
     gap: 20px;
+  }
 
-    & a {
-      font-size: 12px;
-    }
+  .menu a {
+    font-size: 12px;
   }
 
   .nav-icons {
@@ -1101,6 +1243,7 @@ body {
   .hero {
     padding: 0; /* no duplicar espaciado: .container alinea el contenido */
   }
+
   .hero-content h1 {
     font-size: 3rem;
   }
@@ -1115,10 +1258,10 @@ body {
     flex: 1 1 calc(50% - 20px);
     justify-content: flex-start;
     padding: 10px 0;
+  }
 
-    & i {
-      font-size: 28px;
-    }
+  .feature-item i {
+    font-size: 28px;
   }
 
   /* PRODUCTS */
@@ -1151,13 +1294,31 @@ body {
     height: 300px;
   }
 
+  .news-content h3 {
+    font-size: 15px;
+    color: var(--white);
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .news-content p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.4;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
   /* NEWSLETTER */
   .newsletter {
     padding: 60px 0;
+  }
 
-    & h2 {
-      font-size: 1.8rem;
-    }
+  .newsletter h2 {
+    font-size: 1.8rem;
   }
 
   /* GALLERY */
@@ -1166,13 +1327,23 @@ body {
   }
 
   .gallery-item {
-    height: 200px;
+    height: 140px;
+    min-height: 140px;
   }
 
   /* FOOTER PRODUCTS */
   .footer-products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+  }
+
+  .product-item img {
+    width: 45px;
+    height: 55px;
+  }
+
+  .product-item .product-info strong {
+    font-size: 10px;
   }
 
   /* FOOTER */
@@ -1210,7 +1381,6 @@ body {
     flex-direction: column;
     padding: 20px;
     gap: 0;
-
   }
 
   /* items y enlaces del menú móvil */
@@ -1281,7 +1451,7 @@ body {
 
   /* FEATURES BAR */
   .features-bar {
-    padding: 25px 0;
+    padding: 30px 0;
   }
 
   .features-content {
@@ -1295,10 +1465,14 @@ body {
     text-align: center;
     flex-direction: column;
     gap: 10px;
+  }
 
-    & i {
-      font-size: 30px;
-    }
+  .feature-text {
+    text-align: center;
+  }
+
+  .feature-item i {
+    font-size: 30px;
   }
 
   /* SECTIONS */
@@ -1306,11 +1480,13 @@ body {
   .browse-section,
   .latest-news {
     padding: 50px 0;
+  }
 
-    & h2 {
-      font-size: 1.5rem;
-      margin-bottom: 40px;
-    }
+  .products-section h2,
+  .browse-section h2,
+  .latest-news h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
   }
 
   /* PRODUCTS */
@@ -1346,43 +1522,63 @@ body {
     height: 280px;
   }
 
+  .news-date {
+    top: 12px;
+    left: 12px;
+  }
+
   .news-content {
-    & h3 {
-      font-size: 13px;
-    }
-    & p {
-      font-size: 12px;
-    }
+    padding: 30px 16px;
+  }
+
+  .news-content h3,
+  .news-content p {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .news-content h3 {
+    font-size: 13px;
+  }
+
+  .news-content p {
+    font-size: 12px;
   }
 
   /* NEWSLETTER */
   .newsletter {
     padding: 50px 0;
+    text-align: center;
+  }
 
-    & h2 {
-      font-size: 1.4rem;
-      margin-bottom: 20px;
-    }
+  .newsletter h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
 
-    & p {
-      font-size: 14px;
-      margin-bottom: 30px;
-      padding: 0 10px;
-    }
+  .newsletter p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding: 0 10px;
   }
 
   .newsletter-form {
     flex-direction: column;
     padding: 0 20px;
+    gap: 12px;
+    align-items: center;
+  }
 
-    & input {
-      padding: 14px 20px;
-      text-align: center;
-    }
+  .newsletter-form input {
+    padding: 14px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 24px;
+  }
 
-    & button {
-      padding: 14px 30px;
-    }
+  .newsletter-form button {
+    padding: 14px 30px;
   }
 
   /* GALLERY */
@@ -1391,7 +1587,8 @@ body {
   }
 
   .gallery-item {
-    height: 150px;
+    height: 140px;
+    min-height: 140px;
   }
 
   /* FOOTER PRODUCTS */
@@ -1401,20 +1598,26 @@ body {
 
   .footer-products-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 35px;
   }
 
   .product-column h2 {
     text-align: center;
+    font-size: 12px;
   }
 
   .product-item {
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
 
-    & img {
-      width: 60px;
-      height: 75px;
-    }
+  .product-item img {
+    width: 45px;
+    height: 55px;
+  }
+
+  .product-item .product-info strong {
+    font-size: 10px;
   }
 
   /* FOOTER */
@@ -1425,34 +1628,48 @@ body {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 35px;
-    text-align: center;
+    text-align: left;
   }
 
-  .footer-section {
-    & h2 {
-      margin-bottom: 20px;
-    }
+  .footer-section h2 {
+    margin-bottom: 20px;
   }
 
   .social-icons {
     justify-content: center;
   }
 
+  /* Fix alignment of lists in mobile: remove default UL padding and keep items left-aligned inside centered column */
+  .footer-news {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 320px;
+  }
+
   .footer-news-item {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+  .footer-news-item p {
+    margin: 0;
+    text-align: left;
+    color: #999;
   }
 
   .tag-cloud {
     justify-content: center;
+    padding: 0;
+    margin: 0 auto;
   }
 
   .footer-newsletter {
     flex-direction: column;
     gap: 10px;
+  }
 
-    & input {
-      text-align: center;
-    }
+  .footer-newsletter input {
+    text-align: center;
   }
 
   .footer-bottom {
@@ -1472,9 +1689,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+  }
 
-    & a {
-      font-size: 11px;
-    }
+  .footer-nav a {
+    font-size: 11px;
   }
 }
