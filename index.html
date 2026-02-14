@@ -15,13 +15,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="static/styles/styles.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="header-container">
-        <nav class="main-nav">
+      <div class="container">
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
           <div class="nav-left">
             <a class="logo" href="#">
               <svg class="logo-icon" viewBox="0 0 24 24" width="28" height="28">
@@ -30,13 +30,13 @@
               <span class="logo-text">FLATSOME</span>
             </a>
             <!-- Search is a simple control: not submitting anywhere in this static demo -->
-            <div class="search-form" aria-hidden="true">
-              <button type="button" class="nav-search">
+            <div class="search-form">
+              <button type="button" class="nav-search" aria-label="Buscar">
                 <i class="fas fa-search"></i>
               </button>
             </div>
             <!-- checkbox para controlar el menú móvil -->
-            <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle menu" aria-controls="main-menu" />
             <ul class="menu" id="main-menu">
               <li><a href="#">DEMOS <i class="fas fa-chevron-down"></i></a></li>
               <li><a href="#">FEATURES <i class="fas fa-chevron-down"></i></a></li>
@@ -69,16 +69,18 @@
     <section class="hero">
       <h2 class="sr-only">Bienvenida</h2>
       <!-- Slider Navigation Arrows -->
-      <button class="hero-arrow hero-arrow-left">
+      <button type="button" class="hero-arrow hero-arrow-left">
         <i class="fas fa-chevron-left"></i>
       </button>
-      <button class="hero-arrow hero-arrow-right">
+      <button type="button" class="hero-arrow hero-arrow-right">
         <i class="fas fa-chevron-right"></i>
       </button>
 
-      <div class="hero-container">
+      <div class="container">
         <div class="hero-content">
-          <h3>CHANGE THIS<br />TO ANYTHING</h3>
+          <div class="hero-heading-left">
+            <h3>CHANGE THIS<br />TO ANYTHING</h3>
+          </div>
           <p>
             Lorem ipsum dolar sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod.
@@ -129,7 +131,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="img/girl.jpeg" alt="On1 Jersey UNIF-2" />
+                  <img src="/static/img/girl.jpeg" alt="On1 Jersey UNIF-2" />
                 </a>
                 <span class="product-category">SWEATERS</span>
                 <h3><a href="#">On1 Jersey UNIF-2</a></h3>
@@ -139,7 +141,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="img/dude.jpeg" alt="Osaka Entry Tee Superdry 12" />
+                  <img src="/static/img/dude.jpeg" alt="Osaka Entry Tee Superdry 12" />
                 </a>
                 <span class="product-category">MEN</span>
                 <h3><a href="#">Osaka Entry Tee Superdry 12</a></h3>
@@ -149,7 +151,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="img/shoes.jpeg" alt="All Star Canvas Hi Converse" />
+                  <img src="/static/img/shoes.jpeg" alt="All Star Canvas Hi Converse" />
                 </a>
                 <span class="product-category">SHOES</span>
                 <h3><a href="#">All Star Canvas Hi Converse</a></h3>
@@ -159,7 +161,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="img/woman.jpeg" alt="Fluro Big Pullover Designers Remix" />
+                  <img src="/static/img/woman.jpeg" alt="Fluro Big Pullover Designers Remix" />
                 </a>
                 <span class="product-category">SWEATERS</span>
                 <h3><a href="#">Fluro Big Pullover Designers Remix</a></h3>
@@ -177,31 +179,31 @@
           <ul class="browse-grid">
             <li>
               <a href="#">
-                <img src="img/hoodie.jpg" alt="Clothing" />
+                <img src="/static/img/hoodie.jpg" alt="Clothing" />
                 <span>CLOTHING</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="img/earring-woman.jpg" alt="Women" />
+                <img src="/static/img/earring-woman.jpg" alt="Women" />
                 <span>WOMEN</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="img/peace-sign.jpg" alt="Booking" />
+                <img src="/static/img/peace-sign.jpg" alt="Booking" />
                 <span>BOOKING</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="img/shirt-man.jpeg" alt="Men" />
+                <img src="/static/img/shirt-man.jpeg" alt="Men" />
                 <span>MEN</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="img/bag.jpeg" alt="Bags" />
+                <img src="/static/img/bag.jpeg" alt="Bags" />
                 <span>BAGS</span>
               </a>
             </li>
@@ -217,7 +219,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="img/tablet.jpg" alt="News" />
+                  <img src="/static/img/tablet.jpg" alt="News" />
                   <time datetime="2020-11-19">
                     <span class="day">19</span>
                     <span class="month">Nov</span>
@@ -232,7 +234,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="img/dude.jpeg" alt="News" />
+                  <img src="/static/img/dude.jpeg" alt="News" />
                   <time datetime="2020-10-13">
                     <span class="day">13</span>
                     <span class="month">Oct</span>
@@ -247,7 +249,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="img/chill.jpg" alt="News" />
+                  <img src="/static/img/chill.jpg" alt="News" />
                   <time datetime="2020-10-13">
                     <span class="day">13</span>
                     <span class="month">Oct</span>
@@ -262,7 +264,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="img/sitting.jpg" alt="News" />
+                  <img src="/static/img/sitting.jpg" alt="News" />
                   <time datetime="2020-01-01">
                     <span class="day">01</span>
                     <span class="month">Jan</span>
@@ -305,42 +307,42 @@
         <ul class="gallery-grid">
           <li>
             <a href="#">
-              <img src="img/beautiful.jpg" alt="Wave 1" />
+              <img src="/static/img/beautiful.jpg" alt="Wave 1" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/lantern.jpg" alt="Wave 2" />
+              <img src="/static/img/lantern.jpg" alt="Wave 2" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/lake.jpg" alt="Wave 3" />
+              <img src="/static/img/lake.jpg" alt="Wave 3" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/tree.jpg" alt="Wave 4" />
+              <img src="/static/img/tree.jpg" alt="Wave 4" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/boat-in-sea.jpg" alt="Wave 5" />
+              <img src="/static/img/boat-in-sea.jpg" alt="Wave 5" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/cliff.jpg" alt="Wave 6" />
+              <img src="/static/img/cliff.jpg" alt="Wave 6" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/cherry.jpg" alt="Wave 7" />
+              <img src="/static/img/cherry.jpg" alt="Wave 7" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/chill.jpg" alt="Wave 8" />
+              <img src="/static/img/chill.jpg" alt="Wave 8" />
             </a>
           </li>
         </ul>
@@ -357,8 +359,8 @@
             <ul>
               <li>
                 <a href="#">
-                  <img src="img/girl.jpeg" alt="On1 Jersey UNIF-2" />
-                  <div class="meta">
+                  <img src="/static/img/girl.jpeg" alt="On1 Jersey UNIF-2" />
+                  <div>
                     <span class="product-name">On1 Jersey UNIF-2</span>
                     <span class="price">$39,00</span>
                   </div>
@@ -366,8 +368,8 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/dude.jpeg" alt="Osaka Entry Tee Superdry 12" />
-                  <div class="meta">
+                  <img src="/static/img/dude.jpeg" alt="Osaka Entry Tee Superdry 12" />
+                  <div>
                     <span class="product-name">Osaka Entry Tee Superdry 12</span>
                     <span class="price">$29,00</span>
                   </div>
@@ -375,8 +377,8 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/shoes.jpeg" alt="All Star Canvas Hi Converse" />
-                  <div class="meta">
+                  <img src="/static/img/shoes.jpeg" alt="All Star Canvas Hi Converse" />
+                  <div>
                     <span class="product-name">All Star Canvas Hi Converse</span>
                     <span class="price">$29,00</span>
                   </div>
@@ -384,8 +386,8 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/woman.jpeg" alt="Fluro Big Pullover Designers Remix" />
-                  <div class="meta">
+                  <img src="/static/img/woman.jpeg" alt="Fluro Big Pullover Designers Remix" />
+                  <div>
                     <span class="product-name">Fluro Big Pullover Designers Remix</span>
                     <span class="price">$49,00</span>
                   </div>
@@ -400,8 +402,8 @@
             <ul>
               <li>
                 <a href="#">
-                  <img src="img/bag.jpeg" alt="Daisy Bag Sonia by Sonia Rykiel" />
-                  <div class="meta">
+                  <img src="/static/img/bag.jpeg" alt="Daisy Bag Sonia by Sonia Rykiel" />
+                  <div>
                     <span class="product-name">Daisy Bag Sonia by Sonia Rykiel</span>
                     <span class="price">$2.999,00</span>
                   </div>
@@ -409,8 +411,8 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/girl.jpeg" alt="On1 Jersey UNIF" />
-                  <div class="meta">
+                  <img src="/static/img/girl.jpeg" alt="On1 Jersey UNIF" />
+                  <div>
                     <span class="product-name">On1 Jersey UNIF</span>
                     <span class="price">$39,00</span>
                   </div>
@@ -418,8 +420,8 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/shirt-girl.jpeg" alt="Beyond Top NLY Trend" />
-                  <div class="meta">
+                  <img src="/static/img/shirt-girl.jpeg" alt="Beyond Top NLY Trend" />
+                  <div>
                     <span class="product-name">Beyond Top NLY Trend</span>
                     <span class="price">$9,90</span>
                   </div>
@@ -427,8 +429,8 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/hoodie.jpg" alt="Harissa O-Neck Sweat" />
-                  <div class="meta">
+                  <img src="/static/img/hoodie.jpg" alt="Harissa O-Neck Sweat" />
+                  <div>
                     <span class="product-name">Harissa O-Neck Sweat</span>
                     <span class="price">$101,00</span>
                   </div>
@@ -443,8 +445,8 @@
             <ul>
               <li>
                 <a href="#">
-                  <img src="img/dude.jpeg" alt="Osaka Entry Tee Superdry 12" />
-                  <div class="meta">
+                  <img src="/static/img/dude.jpeg" alt="Osaka Entry Tee Superdry 12" />
+                  <div>
                     <span class="product-name">Osaka Entry Tee Superdry 12</span>
                     <span class="price">$29,00</span>
                   </div>
@@ -452,8 +454,8 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/shoes.jpeg" alt="All Star Canvas Hi Converse" />
-                  <div class="meta">
+                  <img src="/static/img/shoes.jpeg" alt="All Star Canvas Hi Converse" />
+                  <div>
                     <span class="product-name">All Star Canvas Hi Converse</span>
                     <span class="price">$29,00</span>
                   </div>
@@ -461,8 +463,8 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/woman.jpeg" alt="Fluro Big Pullover Designers Remix" />
-                  <div class="meta">
+                  <img src="/static/img/woman.jpeg" alt="Fluro Big Pullover Designers Remix" />
+                  <div>
                     <span class="product-name">Fluro Big Pullover Designers Remix</span>
                     <span class="price">$49,00</span>
                   </div>
@@ -470,8 +472,8 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/shirt-man.jpeg" alt="Varanise CN Tee Hilfiger Denim" />
-                  <div class="meta">
+                  <img src="/static/img/shirt-man.jpeg" alt="Varanise CN Tee Hilfiger Denim" />
+                  <div>
                     <span class="product-name">Varanise CN Tee Hilfiger Denim</span>
                     <span class="price-old">$19,00</span>
                     <span class="price">$15,00</span>
@@ -487,7 +489,7 @@
             <ul>
               <li>
                 <a href="#">
-                  <img src="img/bag.jpeg" alt="Talifa Bag, NYPD" />
+                  <img src="/static/img/bag.jpeg" alt="Talifa Bag, NYPD" />
                   <div class="meta">
                     <span class="product-name">Talifa Bag , NYPD</span>
                     <span class="stars">
@@ -503,7 +505,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/bag.jpeg" alt="Adelia Bag, NYPD" />
+                  <img src="/static/img/bag.jpeg" alt="Adelia Bag, NYPD" />
                   <div class="meta">
                     <span class="product-name">Adelia Bag, NYPD</span>
                     <span class="stars">
@@ -518,7 +520,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="img/shirt-man.jpeg" alt="Land Tee Jack & Jones" />
+                  <img src="/static/img/shirt-man.jpeg" alt="Land Tee Jack & Jones" />
                   <div class="meta">
                     <span class="product-name">Land Tee Jack & Jones</span>
                     <span class="stars">
@@ -548,11 +550,11 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             </p>
             <ul class="social-icons">
-              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="far fa-envelope"></i></a></li>
-              <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+              <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#" aria-label="Email"><i class="far fa-envelope"></i></a></li>
+              <li><a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a></li>
             </ul>
           </section>
 
@@ -649,10 +651,10 @@
         <div class="container">
           <div class="footer-bottom-content">
             <ul class="payment-methods">
-              <li><img src="img/Visa_Inc._logo.svg" alt="Visa" /></li>
-              <li><img src="img/PayPal.svg" alt="PayPal" /></li>
-              <li><img src="img/Stripe_Logo,_revised_2016.svg" alt="Stripe" /></li>
-              <li><img src="img/Mastercard-logo.svg" alt="Mastercard" /></li>
+              <li><img src="/static/img/Visa_Inc._logo.svg" alt="Visa" /></li>
+              <li><img src="/static/img/PayPal.svg" alt="PayPal" /></li>
+              <li><img src="/static/img/Stripe_Logo,_revised_2016.svg" alt="Stripe" /></li>
+              <li><img src="/static/img/Mastercard-logo.svg" alt="Mastercard" /></li>
             </ul>
             <nav class="footer-nav">
               <a href="#">ABOUT</a>
