@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLATSOME - Tienda Online</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="static/styles/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="main-nav" role="navigation">
+          <div class="nav-left">
+            <a class="logo" href="#">
+              <svg class="logo-icon" viewBox="0 0 24 24" width="28" height="28">
+                <path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+              <span class="logo-text">FLATSOME</span>
+            </a>
+            <!-- Search is a simple control: not submitting anywhere in this static demo -->
+            <button type="button" class="nav-search">
+              <i class="fas fa-search"></i>
+            </button>
+            <!-- checkbox para controlar el menú móvil -->
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+            <ul class="menu" id="main-menu">
+              <li><a href="#">DEMOS <i class="fas fa-chevron-down"></i></a></li>
+              <li><a href="#">FEATURES <i class="fas fa-chevron-down"></i></a></li>
+              <li><a href="#">SHOP <i class="fas fa-chevron-down"></i></a></li>
+              <li><a href="#">PAGES <i class="fas fa-chevron-down"></i></a></li>
+              <li><a href="#">BLOG</a></li>
+              <li><a href="#">ELEMENTS</a></li>
+              <!-- Mobile-only quick links for login/cart (keeps header uncluttered on desktop) -->
+              <li class="mobile-only"><a href="#" class="login">LOGIN</a></li>
+              <li class="mobile-only"><a href="#" class="cart-link">CART / $0.00 <span class="cart-count">0</span></a></li>
+            </ul>
+          </div>
+
+          <div class="nav-right">
+            <a href="#" class="login">LOGIN</a>
+            <a href="#" class="cart-link">
+              CART / $0.00
+              <span class="cart-count">0</span>
+            </a>
+            <label for="menu-toggle" class="menu-toggle">
+              <span class="burger-lines"></span>
+              <span class="sr-only">Abrir menú</span>
+            </label>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2 class="sr-only">Bienvenida</h2>
+      <!-- Slider Navigation Arrows -->
+      <button type="button" class="hero-arrow hero-arrow-left">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button type="button" class="hero-arrow hero-arrow-right">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <div class="container">
+        <div class="hero-content">
+            <div class="hero-heading-left">
+              <h1>
+                <span>CHANGE THIS</span>
+                <span>TO ANYTHING</span>
+              </h1>
+              <p>
+                Lorem ipsum dolar sit amet, consectetuer adipiscing elit, sed diam
+                nonummy nibh euismod.
+              </p>
+              <div class="hero-buttons">
+                <a href="#" class="btn-outline">SHOP MEN <i class="fas fa-chevron-right"></i></a>
+                <a href="#" class="btn-outline">SHOP WOMEN <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Slider Dots -->
+      <div class="hero-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- Features Bar -->
+    <section class="features-bar">
+      <div class="container">
+        <ul class="features-content">
+          <li>
+            <i class="fas fa-star"></i>
+            <span>Free Shipping all products above 99$</span>
+          </li>
+          <li>
+            <i class="far fa-heart"></i>
+            <span>New products added everyday</span>
+          </li>
+          <li>
+            <i class="fas fa-star"></i>
+            <span>Free Shipping all products above 99$</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Featured Products -->
+      <section class="products-section">
+        <div class="container">
+          <h2>FEATURED PRODUCTS</h2>
+          <ul class="product-grid">
+            <li>
+              <article>
+                <a href="#">
+                  <img src="static/img/girl.jpeg" loading="lazy" alt="On1 Jersey UNIF-2" />
+                </a>
+                <span class="product-category">SWEATERS</span>
+                <h3><a href="#">On1 Jersey UNIF-2</a></h3>
+                <span class="product-price">$39,00</span>
+              </article>
+            </li>
+            <li>
+              <article>
+                <a href="#">
+                  <img src="static/img/dude.jpeg" loading="lazy" alt="Osaka Entry Tee Superdry 12" />
+                </a>
+                <span class="product-category">MEN</span>
+                <h3><a href="#">Osaka Entry Tee Superdry 12</a></h3>
+                <span class="product-price">$29,00</span>
+              </article>
+            </li>
+            <li>
+              <article>
+                <a href="#">
+                  <img src="static/img/shoes.jpeg" loading="lazy" alt="All Star Canvas Hi Converse" />
+                </a>
+                <span class="product-category">SHOES</span>
+                <h3><a href="#">All Star Canvas Hi Converse</a></h3>
+                <span class="product-price">$29,00</span>
+              </article>
+            </li>
+            <li>
+              <article>
+                <a href="#">
+                  <img src="static/img/woman.jpeg" loading="lazy" alt="Fluro Big Pullover Designers Remix" />
+                </a>
+                <span class="product-category">SWEATERS</span>
+                <h3><a href="#">Fluro Big Pullover Designers Remix</a></h3>
+                <span class="product-price">$49,00</span>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Browse Categories -->
+      <section class="browse-section">
+        <div class="container">
+          <h2>BROWSE</h2>
+          <ul class="browse-grid">
+            <li>
+              <a href="#">
+                <img src="static/img/hoodie.jpg" loading="lazy" alt="Clothing" />
+                <span>CLOTHING</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="static/img/earring-woman.jpg" loading="lazy" alt="Women" />
+                <span>WOMEN</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="static/img/peace-sign.jpg" loading="lazy" alt="Booking" />
+                <span>BOOKING</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="static/img/shirt-man.jpeg" loading="lazy" alt="Men" />
+                <span>MEN</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="static/img/bag.jpeg" loading="lazy" alt="Bags" />
+                <span>BAGS</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Latest News -->
+      <section class="latest-news">
+        <div class="container">
+          <h2>LATEST NEWS</h2>
+          <ul class="news-grid">
+            <li>
+              <article>
+                <a href="#">
+                  <img src="static/img/tablet.jpg" loading="lazy" alt="News" />
+                  <time datetime="2020-11-19">
+                    <span class="day">19</span>
+                    <span class="month">Nov</span>
+                  </time>
+                </a>
+                <h3><a href="#">WELCOME TO FLATSOME</a></h3>
+                <p>
+                  Welcome to WordPress. This is your first post. Edit or delete it, then start blogging! [...]
+                </p>
+              </article>
+            </li>
+            <li>
+              <article>
+                <a href="#">
+                  <img src="static/img/dude.jpeg" loading="lazy" alt="News" />
+                  <time datetime="2020-10-13">
+                    <span class="day">13</span>
+                    <span class="month">Oct</span>
+                  </time>
+                </a>
+                <h3><a href="#">JUST ANOTHER POST WITH A GALLERY</a></h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In sed vulputate massa. Fusce ante magna. [...]
+                </p>
+              </article>
+            </li>
+            <li>
+              <article>
+                <a href="#">
+                  <img src="static/img/chill.jpg" loading="lazy" alt="News" />
+                  <time datetime="2020-10-13">
+                    <span class="day">13</span>
+                    <span class="month">Oct</span>
+                  </time>
+                </a>
+                <h3><a href="#">A SIMPLE BLOG POST</a></h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In sed diam nonummy nibh euismod tincidunt ut [...]
+                </p>
+              </article>
+            </li>
+            <li>
+              <article>
+                <a href="#">
+                  <img src="static/img/sitting.jpg" loading="lazy" alt="News" />
+                  <time datetime="2020-01-01">
+                    <span class="day">01</span>
+                    <span class="month">Jan</span>
+                  </time>
+                </a>
+                <h3><a href="#">A VIDEO BLOG POST</a></h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In sed vulputate massa. Fusce ante magna. [...]
+                </p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="newsletter">
+        <div class="container">
+          <h2>SIGNUP FOR NEWSLETTER</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+            tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          </p>
+          <form class="newsletter-form">
+            <label for="newsletter-email" class="sr-only">Your Email (required)</label>
+            <input
+              type="email"
+              id="newsletter-email"
+              placeholder="Your Email (required)"
+              required
+            />
+            <button type="submit">SIGN UP</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Bottom Gallery -->
+      <section class="bottom-gallery">
+    <h2 class="sr-only">Product Gallery</h2>
+        <ul class="gallery-grid">
+          <li>
+            <a href="#">
+              <img src="static/img/beautiful.jpg" loading="lazy" alt="Wave 1" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="static/img/lantern.jpg" loading="lazy" alt="Wave 2" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="static/img/lake.jpg" loading="lazy" alt="Wave 3" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="static/img/tree.jpg" loading="lazy" alt="Wave 4" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="static/img/boat-in-sea.jpg" loading="lazy" alt="Wave 5" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="static/img/cliff.jpg" loading="lazy" alt="Wave 6" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="static/img/cherry.jpg" loading="lazy" alt="Wave 7" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="static/img/chill.jpg" loading="lazy" alt="Wave 8" />
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer Products Section -->
+    <section class="footer-products">
+      <div class="container">
+        <div class="footer-products-grid">
+          <!-- Latest -->
+          <section>
+            <h2>LATEST</h2>
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="static/img/girl.jpeg" loading="lazy" alt="On1 Jersey UNIF-2" />
+                  <div>
+                    <span class="product-name">On1 Jersey UNIF-2</span>
+                    <span class="price">$39,00</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/dude.jpeg" loading="lazy" alt="Osaka Entry Tee Superdry 12" />
+                  <div>
+                    <span class="product-name">Osaka Entry Tee Superdry 12</span>
+                    <span class="price">$29,00</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/shoes.jpeg" loading="lazy" alt="All Star Canvas Hi Converse" />
+                  <div>
+                    <span class="product-name">All Star Canvas Hi Converse</span>
+                    <span class="price">$29,00</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/woman.jpeg" loading="lazy" alt="Fluro Big Pullover Designers Remix" />
+                  <div>
+                    <span class="product-name">Fluro Big Pullover Designers Remix</span>
+                    <span class="price">$49,00</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Best Selling -->
+          <section>
+            <h2>BEST SELLING</h2>
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="static/img/bag.jpeg" loading="lazy" alt="Daisy Bag Sonia by Sonia Rykiel" />
+                  <div>
+                    <span class="product-name">Daisy Bag Sonia by Sonia Rykiel</span>
+                    <span class="price">$2.999,00</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/girl.jpeg" loading="lazy" alt="On1 Jersey UNIF" />
+                  <div>
+                    <span class="product-name">On1 Jersey UNIF</span>
+                    <span class="price">$39,00</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/shirt-girl.jpeg" loading="lazy" alt="Beyond Top NLY Trend" />
+                  <div>
+                    <span class="product-name">Beyond Top NLY Trend</span>
+                    <span class="price">$9,90</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/hoodie.jpg" loading="lazy" alt="Harissa O-Neck Sweat" />
+                  <div>
+                    <span class="product-name">Harissa O-Neck Sweat</span>
+                    <span class="price">$101,00</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Featured -->
+          <section>
+            <h2>FEATURED</h2>
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="static/img/dude.jpeg" loading="lazy" alt="Osaka Entry Tee Superdry 12" />
+                  <div>
+                    <span class="product-name">Osaka Entry Tee Superdry 12</span>
+                    <span class="price">$29,00</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/shoes.jpeg" loading="lazy" alt="All Star Canvas Hi Converse" />
+                  <div>
+                    <span class="product-name">All Star Canvas Hi Converse</span>
+                    <span class="price">$29,00</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/woman.jpeg" loading="lazy" alt="Fluro Big Pullover Designers Remix" />
+                  <div>
+                    <span class="product-name">Fluro Big Pullover Designers Remix</span>
+                    <span class="price">$49,00</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/shirt-man.jpeg" loading="lazy" alt="Varanise CN Tee Hilfiger Denim" />
+                  <div>
+                    <span class="product-name">Varanise CN Tee Hilfiger Denim</span>
+                    <span class="price-old">$19,00</span>
+                    <span class="price">$15,00</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Top Rated Products -->
+          <section class="top-rated">
+            <h2>TOP RATED PRODUCTS</h2>
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="static/img/bag.jpeg" loading="lazy" alt="Talifa Bag, NYPD" />
+                  <div class="meta">
+                    <span class="product-name">Talifa Bag , NYPD</span>
+                    <span class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="price">$69,00</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/bag.jpeg" loading="lazy" alt="Adelia Bag, NYPD" />
+                  <div class="meta">
+                    <span class="product-name">Adelia Bag, NYPD</span>
+                    <span class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="static/img/shirt-man.jpeg" loading="lazy" alt="Land Tee Jack & Jones" />
+                  <div class="meta">
+                    <span class="product-name">Land Tee Jack & Jones</span>
+                    <span class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- About Us -->
+          <section>
+            <h2>ABOUT US</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </p>
+            <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="far fa-envelope"></i></a></li>
+              <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+            </ul>
+          </section>
+
+          <!-- Latest News -->
+          <section>
+            <h2>LATEST NEWS</h2>
+            <ul class="footer-news">
+              <li>
+                <time datetime="2020-11-19">
+                  <span class="day">19</span>
+                  <span class="month">Nov</span>
+                </time>
+                <a href="#">Welcome to Flatsome</a>
+              </li>
+              <li>
+                <time datetime="2020-10-13">
+                  <span class="day">13</span>
+                  <span class="month">Oct</span>
+                </time>
+                <a href="#">Just another post with A Gallery</a>
+              </li>
+              <li>
+                <time datetime="2020-10-13">
+                  <span class="day">13</span>
+                  <span class="month">Oct</span>
+                </time>
+                <a href="#">A Simple Blog Post</a>
+              </li>
+              <li>
+                <time datetime="2020-01-01">
+                  <span class="day">01</span>
+                  <span class="month">Jan</span>
+                </time>
+                <a href="#">A Video Blog Post</a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Tags -->
+          <section>
+            <h2>TAGS</h2>
+            <ul class="tag-cloud">
+              <li><a href="#">bag</a></li>
+              <li><a href="#">classic</a></li>
+              <li><a href="#">Converse</a></li>
+              <li><a href="#">Diesel</a></li>
+              <li><a href="#">fit</a></li>
+              <li><a href="#">green</a></li>
+              <li><a href="#">Jack and Jones</a></li>
+              <li><a href="#">Jack and Jones-2</a></li>
+              <li><a href="#">jeans</a></li>
+              <li><a href="#">Jumper</a></li>
+              <li><a href="#">leather</a></li>
+              <li><a href="#">Lee</a></li>
+              <li><a href="#">levis</a></li>
+              <li><a href="#">man</a></li>
+              <li><a href="#">nypd</a></li>
+              <li><a href="#">party</a></li>
+              <li><a href="#">Pink</a></li>
+              <li><a href="#">River Island</a></li>
+              <li><a href="#">rock chick</a></li>
+              <li><a href="#">run</a></li>
+              <li><a href="#">shoe</a></li>
+              <li><a href="#">stars</a></li>
+              <li><a href="#">sweden</a></li>
+              <li><a href="#">t-shirt</a></li>
+              <li><a href="#">vans</a></li>
+              <li><a href="#">washed-out</a></li>
+              <li><a href="#">white</a></li>
+              <li><a href="#">women</a></li>
+            </ul>
+          </section>
+
+          <!-- Newsletter -->
+          <section>
+            <h2>SIGNUP FOR NEWSLETTER</h2>
+            <p>Signup to get news about Flatsome & WooCommerce. We don't spam!</p>
+            <form class="footer-newsletter">
+              <label for="footer-email" class="sr-only">Your Email (required)</label>
+              <input
+                type="email"
+                id="footer-email"
+                placeholder="Your Email (required)"
+                required
+              />
+              <button type="submit">SIGN UP</button>
+            </form>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-content">
+            <ul class="payment-methods">
+              <li><img src="static/img/Visa_Inc._logo.svg" loading="lazy" alt="Visa" /></li>
+              <li><img src="static/img/PayPal.svg" loading="lazy" alt="PayPal" /></li>
+              <li><img src="static/img/Stripe_Logo,_revised_2016.svg" loading="lazy" alt="Stripe" /></li>
+              <li><img src="static/img/Mastercard-logo.svg" loading="lazy" alt="Mastercard" /></li>
+            </ul>
+            <nav class="footer-nav">
+              <a href="#">ABOUT</a>
+              <a href="#">OUR STORES</a>
+              <a href="#">BLOG</a>
+              <a href="#">CONTACT</a>
+              <a href="#">FAQ</a>
+            </nav>
+            <p class="copyright">Copyright 2020 © <a href="#">UX Themes</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
