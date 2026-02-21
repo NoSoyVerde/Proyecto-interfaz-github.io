@@ -16,6 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="static/styles/styles.css" />
+    <link rel="stylesheet" href="static/styles/accessibility.css" />
   </head>
   <body>
     <!-- Header -->
@@ -23,23 +24,23 @@
       <div class="container">
         <nav class="main-nav" role="navigation">
           <div class="nav-left">
-            <a class="logo" href="#">
-              <svg class="logo-icon" viewBox="0 0 24 24" width="28" height="28">
+            <a class="logo" href="#" aria-label="FLATSOME - Inicio">
+              <svg class="logo-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
                 <path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
               </svg>
               <span class="logo-text">FLATSOME</span>
             </a>
             <!-- Search is a simple control: not submitting anywhere in this static demo -->
-            <button type="button" class="nav-search">
-              <i class="fas fa-search"></i>
+            <button type="button" class="nav-search" aria-label="Buscar">
+              <i class="fas fa-search" aria-hidden="true"></i>
             </button>
             <!-- checkbox para controlar el menú móvil -->
             <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
             <ul class="menu" id="main-menu">
-              <li><a href="#">DEMOS <i class="fas fa-chevron-down"></i></a></li>
-              <li><a href="#">FEATURES <i class="fas fa-chevron-down"></i></a></li>
-              <li><a href="#">SHOP <i class="fas fa-chevron-down"></i></a></li>
-              <li><a href="#">PAGES <i class="fas fa-chevron-down"></i></a></li>
+              <li><a href="#">DEMOS <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
+              <li><a href="#">FEATURES <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
+              <li><a href="#">SHOP <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
+              <li><a href="#">PAGES <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
               <li><a href="#">BLOG</a></li>
               <li><a href="#">ELEMENTS</a></li>
               <!-- Mobile-only quick links for login/cart (keeps header uncluttered on desktop) -->
@@ -55,7 +56,7 @@
               <span class="cart-count">0</span>
             </a>
             <label for="menu-toggle" class="menu-toggle">
-              <span class="burger-lines"></span>
+              <span class="burger-lines" aria-hidden="true"></span>
               <span class="sr-only">Abrir menú</span>
             </label>
           </div>
@@ -67,11 +68,11 @@
     <section class="hero">
       <h2 class="sr-only">Bienvenida</h2>
       <!-- Slider Navigation Arrows -->
-      <button type="button" class="hero-arrow hero-arrow-left">
-        <i class="fas fa-chevron-left"></i>
+      <button type="button" class="hero-arrow hero-arrow-left" aria-label="Slide anterior">
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
       </button>
-      <button type="button" class="hero-arrow hero-arrow-right">
-        <i class="fas fa-chevron-right"></i>
+      <button type="button" class="hero-arrow hero-arrow-right" aria-label="Siguiente slide">
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
       </button>
 
       <div class="container">
@@ -94,10 +95,10 @@
       </div>
 
       <!-- Slider Dots -->
-      <div class="hero-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+      <div class="hero-dots" role="tablist" aria-label="Navegación del carrusel">
+        <button type="button" class="dot active" aria-label="Ir al slide 1"></button>
+        <button type="button" class="dot" aria-label="Ir al slide 2"></button>
+        <button type="button" class="dot" aria-label="Ir al slide 3"></button>
       </div>
     </section>
 
@@ -106,15 +107,15 @@
       <div class="container">
         <ul class="features-content">
           <li>
-            <i class="fas fa-star"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
             <span>Free Shipping all products above 99$</span>
           </li>
           <li>
-            <i class="far fa-heart"></i>
+            <i class="far fa-heart" aria-hidden="true"></i>
             <span>New products added everyday</span>
           </li>
           <li>
-            <i class="fas fa-star"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
             <span>Free Shipping all products above 99$</span>
           </li>
         </ul>
@@ -550,11 +551,11 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             </p>
             <ul class="social-icons">
-              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="far fa-envelope"></i></a></li>
-              <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+              <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+              <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#" aria-label="Correo electrónico"><i class="far fa-envelope" aria-hidden="true"></i></a></li>
+              <li><a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
             </ul>
           </section>
 

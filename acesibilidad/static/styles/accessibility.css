@@ -1,0 +1,54 @@
+/* Accessibility overrides: contrast, focus, target size */
+:root{
+  --access-contrast: #dcdcdc;
+  --access-muted: #bfbfbf;
+}
+
+/* Focus visible for keyboard users */
+:focus-visible{
+  outline: 3px solid #ffdd57;
+  outline-offset: 2px;
+}
+
+/* Larger touch targets for enhanced target size requirement (50px) */
+.menu li a,
+.nav-right .login,
+.nav-right .cart-link,
+.social-icons li a,
+.footer-nav a,
+footer .payment-methods li img,
+.menu-toggle,
+.menu-toggle > .burger-lines,
+.nav-search{
+  min-width: 50px !important;
+  min-height: 50px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 6px !important;
+}
+
+/* Make social icons more legible and larger */
+.social-icons li a{
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 16px !important;
+}
+
+/* Improve contrast for small text across page */
+.product-category { color: rgba(255,255,255,0.92) !important; }
+.price-old { color: var(--access-muted) !important; }
+.footer-nav a, .tag-cloud li a { color: var(--access-contrast) !important; }
+.footer-news a { color: var(--access-contrast) !important; }
+.footer .copyright { color: var(--access-muted) !important; }
+
+/* Ensure interactive dots are keyboard focusable */
+.hero-dots .dot{ min-width: 12px; min-height: 12px; }
+
+/* Ensure icons used for decoration remain hidden from AT */
+.fas[aria-hidden], .far[aria-hidden], .fab[aria-hidden]{
+  /* nothing here - presence of aria-hidden handled in HTML */
+}
+
+/* Make buttons and links have clear focus and sufficient contrast when focused */
+a:focus, button:focus { outline: 3px solid #ffdd57 !important; outline-offset: 2px !important; }
