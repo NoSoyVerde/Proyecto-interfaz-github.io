@@ -72,7 +72,7 @@ img { display: block; max-width: 100%; height: auto; }
 .hero {
   height: 100vh;
   min-height: 720px;
-  background: url("../img/surfing-3.jpg") center/cover no-repeat;
+  background: url("../img/surfing-3.webp") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
