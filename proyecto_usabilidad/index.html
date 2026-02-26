@@ -11,10 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
     <!-- Critical CSS loaded early for above-the-fold content -->
     <link rel="preload" href="static/styles/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="static/styles/critical.css"></noscript>
@@ -36,15 +32,26 @@
             </a>
             <!-- Search is a simple control: not submitting anywhere in this static demo -->
             <button type="button" class="nav-search" aria-label="Buscar">
-              <i class="fas fa-search" aria-hidden="true"></i>
+              <!-- search icon -->
+              <svg class="icon" viewBox="0 0 512 512" width="16" height="16" aria-hidden="true">
+                <path fill="currentColor" d="M505 442.7L405.3 343a208.1 208.1 0 1 0-62.8 62.8l99.7 99.7a45.4 45.4 0 0 0 64.3-64.3zM208 352a144 144 0 1 1 144-144 144.2 144.2 0 0 1-144 144z"/>
+              </svg>
             </button>
             <!-- checkbox para controlar el menú móvil -->
             <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
             <ul class="menu" id="main-menu">
-              <li><a href="#">DEMOS <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
-              <li><a href="#">FEATURES <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
-              <li><a href="#">SHOP <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
-              <li><a href="#">PAGES <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
+              <li><a href="#">DEMOS 
+                <svg class="icon" viewBox="0 0 320 512" width="10" height="10" aria-hidden="true"><path fill="currentColor" d="M143 352l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0L160 284l106.4-106.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1z"/></svg>
+              </a></li>
+              <li><a href="#">FEATURES 
+                <svg class="icon" viewBox="0 0 320 512" width="10" height="10" aria-hidden="true"><path fill="currentColor" d="M143 352l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0L160 284l106.4-106.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1z"/></svg>
+              </a></li>
+              <li><a href="#">SHOP 
+                <svg class="icon" viewBox="0 0 320 512" width="10" height="10" aria-hidden="true"><path fill="currentColor" d="M143 352l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0L160 284l106.4-106.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1z"/></svg>
+              </a></li>
+              <li><a href="#">PAGES 
+                <svg class="icon" viewBox="0 0 320 512" width="10" height="10" aria-hidden="true"><path fill="currentColor" d="M143 352l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0L160 284l106.4-106.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1z"/></svg>
+              </a></li>
               <li><a href="#">BLOG</a></li>
               <li><a href="#">ELEMENTS</a></li>
               <!-- Mobile-only quick links for login/cart (keeps header uncluttered on desktop) -->
@@ -73,10 +80,10 @@
       <h2 class="sr-only">Bienvenida</h2>
       <!-- Slider Navigation Arrows -->
       <button type="button" class="hero-arrow hero-arrow-left" aria-label="Slide anterior">
-        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        <svg class="icon" viewBox="0 0 256 512" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M160 448L16 256 160 64z"/></svg>
       </button>
       <button type="button" class="hero-arrow hero-arrow-right" aria-label="Siguiente slide">
-        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        <svg class="icon" viewBox="0 0 256 512" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M96 448l144-144-144-144z"/></svg>
       </button>
 
       <div class="container">
@@ -91,8 +98,12 @@
                 nonummy nibh euismod.
               </p>
               <div class="hero-buttons">
-                <a href="#" class="btn-outline">SHOP MEN <i class="fas fa-chevron-right"></i></a>
-                <a href="#" class="btn-outline">SHOP WOMEN <i class="fas fa-chevron-right"></i></a>
+                <a href="#" class="btn-outline">SHOP MEN 
+                    <svg class="icon" viewBox="0 0 256 512" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M96 448l144-144-144-144z"/></svg>
+                </a>
+                <a href="#" class="btn-outline">SHOP WOMEN 
+                    <svg class="icon" viewBox="0 0 256 512" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M96 448l144-144-144-144z"/></svg>
+                </a>
               </div>
             </div>
         </div>
@@ -111,15 +122,18 @@
       <div class="container">
         <ul class="features-content">
           <li>
-            <i class="fas fa-star" aria-hidden="true"></i>
+            <!-- star icon -->
+            <svg class="icon" viewBox="0 0 576 512" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17c-4.5-9.1-17.8-9.1-22.3 0l-65.3 133.1L47.9 171.5c-10.2 1.5-14.3 14-6.9 21.2l105.9 103-25.2 146.9c-1.7 10 8.8 17.6 17.7 12.9L288 439.6l131.6 69.1c8.9 4.7 19.4-2.9 17.7-12.9l-25.2-146.9 105.9-103c7.4-7.2 3.3-19.7-6.9-21.2z"/></svg>
             <span>Free Shipping all products above 99$</span>
           </li>
           <li>
-            <i class="far fa-heart" aria-hidden="true"></i>
+            <!-- heart outline icon -->
+            <svg class="icon" viewBox="0 0 512 512" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M462.3 62.6C407 15.9 325.4 24.3 275.7 76.1L256 96.3l-19.7-20.2C186.6 24.3 105 15.9 49.7 62.6 7 98.5-10.6 148.9 2.6 195.8c16.1 60.5 70.3 116.7 128.3 176.5l97.4 94.8c12.5 12.2 32.8 12.2 45.3 0l97.4-94.8c58-59.8 112.2-116 128.3-176.5 13.2-46.9-4.4-97.3-47.7-133.2z"/></svg>
             <span>New products added everyday</span>
           </li>
           <li>
-            <i class="fas fa-star" aria-hidden="true"></i>
+            <!-- star icon -->
+            <svg class="icon" viewBox="0 0 576 512" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17c-4.5-9.1-17.8-9.1-22.3 0l-65.3 133.1L47.9 171.5c-10.2 1.5-14.3 14-6.9 21.2l105.9 103-25.2 146.9c-1.7 10 8.8 17.6 17.7 12.9L288 439.6l131.6 69.1c8.9 4.7 19.4-2.9 17.7-12.9l-25.2-146.9 105.9-103c7.4-7.2 3.3-19.7-6.9-21.2z"/></svg>
             <span>Free Shipping all products above 99$</span>
           </li>
         </ul>
@@ -136,7 +150,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/girl.webp" loading="lazy" alt="On1 Jersey UNIF-2" />
+                  <img src="static/img/girl.webp" loading="lazy" alt="On1 Jersey UNIF-2" width="494" height="593" />
                 </a>
                 <span class="product-category">SWEATERS</span>
                 <h3><a href="#">On1 Jersey UNIF-2</a></h3>
@@ -146,7 +160,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/dude.webp" loading="lazy" alt="Osaka Entry Tee Superdry 12" />
+                  <img src="static/img/dude.webp" loading="lazy" alt="Osaka Entry Tee Superdry 12" width="494" height="593" />
                 </a>
                 <span class="product-category">MEN</span>
                 <h3><a href="#">Osaka Entry Tee Superdry 12</a></h3>
@@ -156,7 +170,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/shoes.webp" loading="lazy" alt="All Star Canvas Hi Converse" />
+                  <img src="static/img/shoes.webp" loading="lazy" alt="All Star Canvas Hi Converse" width="494" height="593" />
                 </a>
                 <span class="product-category">SHOES</span>
                 <h3><a href="#">All Star Canvas Hi Converse</a></h3>
@@ -166,7 +180,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/woman.webp" loading="lazy" alt="Fluro Big Pullover Designers Remix" />
+                  <img src="static/img/woman.webp" loading="lazy" alt="Fluro Big Pullover Designers Remix" width="494" height="593" />
                 </a>
                 <span class="product-category">SWEATERS</span>
                 <h3><a href="#">Fluro Big Pullover Designers Remix</a></h3>
@@ -184,31 +198,31 @@
           <ul class="browse-grid">
             <li>
               <a href="#">
-                <img src="static/img/hoodie.webp" loading="lazy" alt="Clothing" />
+                <img src="static/img/hoodie.webp" loading="lazy" alt="Clothing" width="494" height="593" />
                 <span>CLOTHING</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="static/img/earring-woman.webp" loading="lazy" alt="Women" />
+                <img src="static/img/earring-woman.webp" loading="lazy" alt="Women" width="400" height="250" />
                 <span>WOMEN</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="static/img/peace-sign.webp" loading="lazy" alt="Booking" />
+                <img src="static/img/peace-sign.webp" loading="lazy" alt="Booking" width="494" height="593" />
                 <span>BOOKING</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="static/img/shirt-man.webp" loading="lazy" alt="Men" />
+                <img src="static/img/shirt-man.webp" loading="lazy" alt="Men" width="510" height="649" />
                 <span>MEN</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="static/img/bag.webp" loading="lazy" alt="Bags" />
+                <img src="static/img/bag.webp" loading="lazy" alt="Bags" width="494" height="593" />
                 <span>BAGS</span>
               </a>
             </li>
@@ -224,7 +238,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/tablet.webp" loading="lazy" alt="News" />
+                  <img src="static/img/tablet.webp" loading="lazy" alt="News" width="400" height="267" />
                   <time datetime="2020-11-19">
                     <span class="day">19</span>
                     <span class="month">Nov</span>
@@ -239,7 +253,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/dude.webp" loading="lazy" alt="News" />
+                  <img src="static/img/dude.webp" loading="lazy" alt="News" width="494" height="593" />
                   <time datetime="2020-10-13">
                     <span class="day">13</span>
                     <span class="month">Oct</span>
@@ -254,7 +268,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/chill.webp" loading="lazy" alt="News" />
+                  <img src="static/img/chill.webp" loading="lazy" alt="News" width="1440" height="1440" />
                   <time datetime="2020-10-13">
                     <span class="day">13</span>
                     <span class="month">Oct</span>
@@ -269,7 +283,7 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/sitting.webp" loading="lazy" alt="News" />
+                  <img src="static/img/sitting.webp" loading="lazy" alt="News" width="400" height="266" />
                   <time datetime="2020-01-01">
                     <span class="day">01</span>
                     <span class="month">Jan</span>
@@ -312,42 +326,42 @@
         <ul class="gallery-grid">
           <li>
             <a href="#">
-              <img src="static/img/beautiful.webp" loading="lazy" alt="Wave 1" />
+              <img src="static/img/beautiful.webp" loading="lazy" alt="Wave 1" width="1440" height="1440" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/lantern.webp" loading="lazy" alt="Wave 2" />
+              <img src="static/img/lantern.webp" loading="lazy" alt="Wave 2" width="1440" height="1440" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/lake.webp" loading="lazy" alt="Wave 3" />
+              <img src="static/img/lake.webp" loading="lazy" alt="Wave 3" width="1440" height="1440" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/tree.webp" loading="lazy" alt="Wave 4" />
+              <img src="static/img/tree.webp" loading="lazy" alt="Wave 4" width="1440" height="1440" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/boat-in-sea.webp" loading="lazy" alt="Wave 5" />
+              <img src="static/img/boat-in-sea.webp" loading="lazy" alt="Wave 5" width="1440" height="1440" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/cliff.webp" loading="lazy" alt="Wave 6" />
+              <img src="static/img/cliff.webp" loading="lazy" alt="Wave 6" width="1440" height="1440" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/cherry.webp" loading="lazy" alt="Wave 7" />
+              <img src="static/img/cherry.webp" loading="lazy" alt="Wave 7" width="1440" height="1440" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/chill.webp" loading="lazy" alt="Wave 8" />
+              <img src="static/img/chill.webp" loading="lazy" alt="Wave 8" width="1440" height="1440" />
             </a>
           </li>
         </ul>
@@ -364,7 +378,7 @@
             <ul>
               <li>
                 <a href="#">
-                  <img src="static/img/girl.webp" loading="lazy" alt="On1 Jersey UNIF-2" />
+                  <img src="static/img/girl.webp" loading="lazy" alt="On1 Jersey UNIF-2" width="494" height="593" />
                   <div>
                     <span class="product-name">On1 Jersey UNIF-2</span>
                     <span class="price">$39,00</span>
@@ -373,7 +387,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/dude.webp" loading="lazy" alt="Osaka Entry Tee Superdry 12" />
+                  <img src="static/img/dude.webp" loading="lazy" alt="Osaka Entry Tee Superdry 12" width="494" height="593" />
                   <div>
                     <span class="product-name">Osaka Entry Tee Superdry 12</span>
                     <span class="price">$29,00</span>
@@ -382,7 +396,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/shoes.webp" loading="lazy" alt="All Star Canvas Hi Converse" />
+                  <img src="static/img/shoes.webp" loading="lazy" alt="All Star Canvas Hi Converse" width="494" height="593" />
                   <div>
                     <span class="product-name">All Star Canvas Hi Converse</span>
                     <span class="price">$29,00</span>
@@ -391,7 +405,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/woman.webp" loading="lazy" alt="Fluro Big Pullover Designers Remix" />
+                  <img src="static/img/woman.webp" loading="lazy" alt="Fluro Big Pullover Designers Remix" width="494" height="593" />
                   <div>
                     <span class="product-name">Fluro Big Pullover Designers Remix</span>
                     <span class="price">$49,00</span>
@@ -407,7 +421,7 @@
             <ul>
               <li>
                 <a href="#">
-                  <img src="static/img/bag.webp" loading="lazy" alt="Daisy Bag Sonia by Sonia Rykiel" />
+                  <img src="static/img/bag.webp" loading="lazy" alt="Daisy Bag Sonia by Sonia Rykiel" width="494" height="593" />
                   <div>
                     <span class="product-name">Daisy Bag Sonia by Sonia Rykiel</span>
                     <span class="price">$2.999,00</span>
@@ -416,7 +430,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/girl.webp" loading="lazy" alt="On1 Jersey UNIF" />
+                  <img src="static/img/girl.webp" loading="lazy" alt="On1 Jersey UNIF" width="494" height="593" />
                   <div>
                     <span class="product-name">On1 Jersey UNIF</span>
                     <span class="price">$39,00</span>
@@ -425,7 +439,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/shirt-girl.webp" loading="lazy" alt="Beyond Top NLY Trend" />
+                  <img src="static/img/shirt-girl.webp" loading="lazy" alt="Beyond Top NLY Trend" width="494" height="593" />
                   <div>
                     <span class="product-name">Beyond Top NLY Trend</span>
                     <span class="price">$9,90</span>
@@ -434,7 +448,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/hoodie.webp" loading="lazy" alt="Harissa O-Neck Sweat" />
+                  <img src="static/img/hoodie.webp" loading="lazy" alt="Harissa O-Neck Sweat" width="494" height="593" />
                   <div>
                     <span class="product-name">Harissa O-Neck Sweat</span>
                     <span class="price">$101,00</span>
@@ -450,7 +464,7 @@
             <ul>
               <li>
                 <a href="#">
-                  <img src="static/img/dude.webp" loading="lazy" alt="Osaka Entry Tee Superdry 12" />
+                  <img src="static/img/dude.webp" loading="lazy" alt="Osaka Entry Tee Superdry 12" width="494" height="593" />
                   <div>
                     <span class="product-name">Osaka Entry Tee Superdry 12</span>
                     <span class="price">$29,00</span>
@@ -459,7 +473,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/shoes.webp" loading="lazy" alt="All Star Canvas Hi Converse" />
+                  <img src="static/img/shoes.webp" loading="lazy" alt="All Star Canvas Hi Converse" width="494" height="593" />
                   <div>
                     <span class="product-name">All Star Canvas Hi Converse</span>
                     <span class="price">$29,00</span>
@@ -468,7 +482,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/woman.webp" loading="lazy" alt="Fluro Big Pullover Designers Remix" />
+                  <img src="static/img/woman.webp" loading="lazy" alt="Fluro Big Pullover Designers Remix" width="494" height="593" />
                   <div>
                     <span class="product-name">Fluro Big Pullover Designers Remix</span>
                     <span class="price">$49,00</span>
@@ -477,7 +491,7 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/shirt-man.webp" loading="lazy" alt="Varanise CN Tee Hilfiger Denim" />
+                  <img src="static/img/shirt-man.webp" loading="lazy" alt="Varanise CN Tee Hilfiger Denim" width="494" height="593" />
                   <div>
                     <span class="product-name">Varanise CN Tee Hilfiger Denim</span>
                     <span class="price-old">$19,00</span>
@@ -494,15 +508,12 @@
             <ul>
               <li>
                 <a href="#">
-                  <img src="static/img/bag.webp" loading="lazy" alt="Talifa Bag, NYPD" />
+                  <img src="static/img/bag.webp" loading="lazy" alt="Talifa Bag, NYPD" width="494" height="593" />
                   <div class="meta">
                     <span class="product-name">Talifa Bag , NYPD</span>
                     <span class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
+                      <!-- star icon -->
+                      <svg class="icon" viewBox="0 0 576 512" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17c-4.5-9.1-17.8-9.1-22.3 0l-65.3 133.1L47.9 171.5c-10.2 1.5-14.3 14-6.9 21.2l105.9 103-25.2 146.9c-1.7 10 8.8 17.6 17.7 12.9L288 439.6l131.6 69.1c8.9 4.7 19.4-2.9 17.7-12.9l-25.2-146.9 105.9-103c7.4-7.2 3.3-19.7-6.9-21.2z"/></svg>
                     </span>
                     <span class="price">$69,00</span>
                   </div>
@@ -510,30 +521,24 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/bag.webp" loading="lazy" alt="Adelia Bag, NYPD" />
+                  <img src="static/img/bag.webp" loading="lazy" alt="Adelia Bag, NYPD" width="494" height="593" />
                   <div class="meta">
                     <span class="product-name">Adelia Bag, NYPD</span>
                     <span class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
+                      <!-- star icon -->
+                      <svg class="icon" viewBox="0 0 576 512" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17c-4.5-9.1-17.8-9.1-22.3 0l-65.3 133.1L47.9 171.5c-10.2 1.5-14.3 14-6.9 21.2l105.9 103-25.2 146.9c-1.7 10 8.8 17.6 17.7 12.9L288 439.6l131.6 69.1c8.9 4.7 19.4-2.9 17.7-12.9l-25.2-146.9 105.9-103c7.4-7.2 3.3-19.7-6.9-21.2z"/></svg>
                     </span>
                   </div>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="static/img/shirt-man.webp" loading="lazy" alt="Land Tee Jack & Jones" />
+                  <img src="static/img/shirt-man.webp" loading="lazy" alt="Land Tee Jack & Jones" width="494" height="593" />
                   <div class="meta">
                     <span class="product-name">Land Tee Jack & Jones</span>
                     <span class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
+                      <!-- star icon -->
+                      <svg class="icon" viewBox="0 0 576 512" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17c-4.5-9.1-17.8-9.1-22.3 0l-65.3 133.1L47.9 171.5c-10.2 1.5-14.3 14-6.9 21.2l105.9 103-25.2 146.9c-1.7 10 8.8 17.6 17.7 12.9L288 439.6l131.6 69.1c8.9 4.7 19.4-2.9 17.7-12.9l-25.2-146.9 105.9-103c7.4-7.2 3.3-19.7-6.9-21.2z"/></svg>
                     </span>
                   </div>
                 </a>
@@ -555,11 +560,31 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             </p>
             <ul class="social-icons">
-              <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-              <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#" aria-label="Correo electrónico"><i class="far fa-envelope" aria-hidden="true"></i></a></li>
-              <li><a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+              <li><a href="#" aria-label="Facebook">
+                <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <text x="0" y="18" font-size="18" fill="currentColor" font-family="sans-serif">F</text>
+                </svg>
+              </a></li>
+              <li><a href="#" aria-label="Instagram">
+                <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <text x="0" y="18" font-size="18" fill="currentColor" font-family="sans-serif">I</text>
+                </svg>
+              </a></li>
+              <li><a href="#" aria-label="Twitter">
+                <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <text x="0" y="18" font-size="18" fill="currentColor" font-family="sans-serif">T</text>
+                </svg>
+              </a></li>
+              <li><a href="#" aria-label="Correo electrónico">
+                <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <text x="0" y="18" font-size="18" fill="currentColor" font-family="sans-serif">@</text>
+                </svg>
+              </a></li>
+              <li><a href="#" aria-label="Pinterest">
+                <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <text x="0" y="18" font-size="18" fill="currentColor" font-family="sans-serif">P</text>
+                </svg>
+              </a></li>
             </ul>
           </section>
 

@@ -38,6 +38,13 @@ img { display: block; max-width: 100%; height: auto; }
 
 .mobile-only { display: none; }
 
+/* improve inline svg icons used instead of external font */
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
 /* header styles (mobile + desktop) */
 .header {
   position: absolute;
@@ -173,7 +180,7 @@ img { display: block; max-width: 100%; height: auto; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .18s ease;
+  transition: transform .18s ease;
   opacity: .96;
   border-radius: 50%;
   z-index: 4;
@@ -199,7 +206,7 @@ img { display: block; max-width: 100%; height: auto; }
   border-radius: 50%;
   background: rgba(255,255,255,.45);
   cursor: pointer;
-  transition: background .3s, transform .18s;
+  transition: transform .18s;
 }
 
 .hero .hero-dots .dot.active,
