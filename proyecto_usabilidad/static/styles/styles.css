@@ -169,7 +169,7 @@ main section h2 {
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: .8px;
-        transition: background .3s ease;
+        /* instant background change avoids animating color */
       }
 
       &:hover {
@@ -591,11 +591,11 @@ main section h2 {
       border-radius: 50%;
       text-decoration: none;
       font-size: 13px;
-      transition: background 0.25s ease, transform 0.15s ease;
+      transition: transform 0.15s ease, opacity 0.15s ease;
 
       &:hover {
-        background: #2d9cca;
         transform: translateY(-2px);
+        opacity: 0.85;
       }
     }
   }
@@ -654,10 +654,11 @@ main section h2 {
       font-size: 10px;
       color: #999;
       text-decoration: none;
-      transition: all 0.3s ease;
+      /* animate only transform/opacity so the browser can composite smoothly */
+      transition: transform .3s ease, opacity .3s ease;
       &:hover {
-        border-color: #2d9cca;
-        color: #2d9cca;
+        transform: translateY(-2px);
+        opacity: 0.8;
       }
     }
   }
@@ -689,9 +690,10 @@ main section h2 {
       text-transform: uppercase;
       letter-spacing: 1px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      /* use transform for hover effect instead of animating background color */
+      transition: transform .2s ease, opacity .2s ease;
       border-radius: 20px;
-      &:hover { background: #258db8; }
+      &:hover { transform: translateY(-2px); opacity:.9; }
     }
   }
 
@@ -735,7 +737,7 @@ main section h2 {
       text-decoration: none;
       font-size: 11px;
       letter-spacing: 1px;
-      transition: color 0.3s ease;
+      /* remove color transition to avoid non-composite animation */
       &:hover { color: var(--white); }
     }
   }
