@@ -16,6 +16,12 @@
     <!-- main stylesheet deferred to reduce render-blocking -->
     <link rel="preload" href="static/styles/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="static/styles/styles.css"></noscript>
+    <!-- preload actual font files so they arrive early and reduce FOUT/CLS -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDz8V1s.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V1s.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf" as="font" type="font/ttf" crossorigin>
   </head>
   <body>
     <!-- Header -->
@@ -149,7 +155,9 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/girl.webp" loading="lazy" alt="On1 Jersey UNIF-2" width="494" height="593" />
+                  <img src="static/img/girl-800.webp" loading="lazy" alt="On1 Jersey UNIF-2" width="494" height="593"
+                       srcset="static/img/girl-400.webp 400w, static/img/girl-800.webp 800w, static/img/girl-1000.webp 1000w"
+                       sizes="(max-width: 600px) 100vw, 494px" />
                 </a>
                 <span class="product-category">SWEATERS</span>
                 <h3><a href="#">On1 Jersey UNIF-2</a></h3>
@@ -159,7 +167,9 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/dude.webp" loading="lazy" alt="Osaka Entry Tee Superdry 12" width="494" height="593" />
+                  <img src="static/img/dude-800.webp" loading="lazy" alt="Osaka Entry Tee Superdry 12" width="494" height="593"
+                       srcset="static/img/dude-400.webp 400w, static/img/dude-800.webp 800w, static/img/dude-1000.webp 1000w"
+                       sizes="(max-width: 600px) 100vw, 494px" />
                 </a>
                 <span class="product-category">MEN</span>
                 <h3><a href="#">Osaka Entry Tee Superdry 12</a></h3>
@@ -169,7 +179,9 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/shoes.webp" loading="lazy" alt="All Star Canvas Hi Converse" width="494" height="593" />
+                  <img src="static/img/shoes-800.webp" loading="lazy" alt="All Star Canvas Hi Converse" width="494" height="593"
+                       srcset="static/img/shoes-400.webp 400w, static/img/shoes-800.webp 800w, static/img/shoes-1000.webp 1000w"
+                       sizes="(max-width: 600px) 100vw, 494px" />
                 </a>
                 <span class="product-category">SHOES</span>
                 <h3><a href="#">All Star Canvas Hi Converse</a></h3>
@@ -179,7 +191,9 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/woman.webp" loading="lazy" alt="Fluro Big Pullover Designers Remix" width="494" height="593" />
+                  <img src="static/img/woman-800.webp" loading="lazy" alt="Fluro Big Pullover Designers Remix" width="494" height="593"
+                       srcset="static/img/woman-400.webp 400w, static/img/woman-800.webp 800w, static/img/woman-1000.webp 1000w"
+                       sizes="(max-width: 600px) 100vw, 494px" />
                 </a>
                 <span class="product-category">SWEATERS</span>
                 <h3><a href="#">Fluro Big Pullover Designers Remix</a></h3>
@@ -197,31 +211,41 @@
           <ul class="browse-grid">
             <li>
               <a href="#">
-                <img src="static/img/hoodie.webp" loading="lazy" alt="Clothing" width="494" height="593" />
+                <img src="static/img/hoodie-800.webp" loading="lazy" alt="Clothing" width="494" height="593"
+                     srcset="static/img/hoodie-400.webp 400w, static/img/hoodie-800.webp 800w, static/img/hoodie-1000.webp 1000w"
+                     sizes="(max-width: 600px) 100vw, 494px" />
                 <span>CLOTHING</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="static/img/earring-woman.webp" loading="lazy" alt="Women" width="400" height="250" />
+                <img src="static/img/earring-woman-800.webp" loading="lazy" alt="Women" width="400" height="250"
+                     srcset="static/img/earring-woman-400.webp 400w, static/img/earring-woman-800.webp 800w, static/img/earring-woman-1000.webp 1000w"
+                     sizes="(max-width: 600px) 100vw, 400px" />
                 <span>WOMEN</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="static/img/peace-sign.webp" loading="lazy" alt="Booking" width="494" height="593" />
+                <img src="static/img/peace-sign-800.webp" loading="lazy" alt="Booking" width="494" height="593"
+                     srcset="static/img/peace-sign-400.webp 400w, static/img/peace-sign-800.webp 800w, static/img/peace-sign-1000.webp 1000w"
+                     sizes="(max-width: 600px) 100vw, 494px" />
                 <span>BOOKING</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="static/img/shirt-man.webp" loading="lazy" alt="Men" width="510" height="649" />
+                <img src="static/img/shirt-man-800.webp" loading="lazy" alt="Men" width="510" height="649"
+                     srcset="static/img/shirt-man-400.webp 400w, static/img/shirt-man-800.webp 800w, static/img/shirt-man-1000.webp 1000w"
+                     sizes="(max-width: 600px) 100vw, 510px" />
                 <span>MEN</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="static/img/bag.webp" loading="lazy" alt="Bags" width="494" height="593" />
+                <img src="static/img/bag-800.webp" loading="lazy" alt="Bags" width="494" height="593"
+                     srcset="static/img/bag-400.webp 400w, static/img/bag-800.webp 800w, static/img/bag-1000.webp 1000w"
+                     sizes="(max-width: 600px) 100vw, 494px" />
                 <span>BAGS</span>
               </a>
             </li>
@@ -237,7 +261,9 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/tablet.webp" loading="lazy" alt="News" width="400" height="267" />
+                  <img src="static/img/tablet-800.webp" loading="lazy" alt="News" width="400" height="267"
+                       srcset="static/img/tablet-400.webp 400w, static/img/tablet-800.webp 800w, static/img/tablet-1000.webp 1000w"
+                       sizes="(max-width: 600px) 100vw, 400px" />
                   <time datetime="2020-11-19">
                     <span class="day">19</span>
                     <span class="month">Nov</span>
@@ -252,7 +278,9 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/dude.webp" loading="lazy" alt="News" width="494" height="593" />
+                  <img src="static/img/dude-800.webp" loading="lazy" alt="News" width="494" height="593"
+                       srcset="static/img/dude-400.webp 400w, static/img/dude-800.webp 800w, static/img/dude-1000.webp 1000w"
+                       sizes="(max-width: 600px) 100vw, 494px" />
                   <time datetime="2020-10-13">
                     <span class="day">13</span>
                     <span class="month">Oct</span>
@@ -267,7 +295,9 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/chill.webp" loading="lazy" alt="News" width="1440" height="1440" />
+                  <img src="static/img/chill-800.webp" loading="lazy" alt="News" width="1440" height="1440"
+                       srcset="static/img/chill-400.webp 400w, static/img/chill-800.webp 800w, static/img/chill-1000.webp 1000w"
+                       sizes="(max-width: 600px) 100vw, 385px" />
                   <time datetime="2020-10-13">
                     <span class="day">13</span>
                     <span class="month">Oct</span>
@@ -282,7 +312,9 @@
             <li>
               <article>
                 <a href="#">
-                  <img src="static/img/sitting.webp" loading="lazy" alt="News" width="400" height="266" />
+                  <img src="static/img/sitting-800.webp" loading="lazy" alt="News" width="400" height="266"
+                       srcset="static/img/sitting-400.webp 400w, static/img/sitting-800.webp 800w, static/img/sitting-1000.webp 1000w"
+                       sizes="(max-width: 600px) 100vw, 400px" />
                   <time datetime="2020-01-01">
                     <span class="day">01</span>
                     <span class="month">Jan</span>
@@ -325,42 +357,66 @@
         <ul class="gallery-grid">
           <li>
             <a href="#">
-              <img src="static/img/beautiful.webp" loading="lazy" alt="Wave 1" width="1440" height="1440" />
+              <img src="static/img/beautiful-800.webp" loading="lazy" alt="Wave 1"
+                   width="1440" height="1440"
+                   srcset="static/img/beautiful-400.webp 400w, static/img/beautiful-800.webp 800w, static/img/beautiful-1000.webp 1000w"
+                   sizes="(max-width: 600px) 100vw, 385px" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/lantern.webp" loading="lazy" alt="Wave 2" width="1440" height="1440" />
+              <img src="static/img/lantern-800.webp" loading="lazy" alt="Wave 2"
+                   width="1440" height="1440"
+                   srcset="static/img/lantern-400.webp 400w, static/img/lantern-800.webp 800w, static/img/lantern-1000.webp 1000w"
+                   sizes="(max-width: 600px) 100vw, 385px" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/lake.webp" loading="lazy" alt="Wave 3" width="1440" height="1440" />
+              <img src="static/img/lake-800.webp" loading="lazy" alt="Wave 3"
+                   width="1440" height="1440"
+                   srcset="static/img/lake-400.webp 400w, static/img/lake-800.webp 800w, static/img/lake-1000.webp 1000w"
+                   sizes="(max-width: 600px) 100vw, 385px" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/tree.webp" loading="lazy" alt="Wave 4" width="1440" height="1440" />
+              <img src="static/img/tree-800.webp" loading="lazy" alt="Wave 4"
+                   width="1440" height="1440"
+                   srcset="static/img/tree-400.webp 400w, static/img/tree-800.webp 800w, static/img/tree-1000.webp 1000w"
+                   sizes="(max-width: 600px) 100vw, 385px" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/boat-in-sea.webp" loading="lazy" alt="Wave 5" width="1440" height="1440" />
+              <img src="static/img/boat-in-sea-800.webp" loading="lazy" alt="Wave 5"
+                   width="1440" height="1440"
+                   srcset="static/img/boat-in-sea-400.webp 400w, static/img/boat-in-sea-800.webp 800w, static/img/boat-in-sea-1000.webp 1000w"
+                   sizes="(max-width: 600px) 100vw, 385px" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/cliff.webp" loading="lazy" alt="Wave 6" width="1440" height="1440" />
+              <img src="static/img/cliff-800.webp" loading="lazy" alt="Wave 6"
+                   width="1440" height="1440"
+                   srcset="static/img/cliff-400.webp 400w, static/img/cliff-800.webp 800w, static/img/cliff-1000.webp 1000w"
+                   sizes="(max-width: 600px) 100vw, 385px" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/cherry.webp" loading="lazy" alt="Wave 7" width="1440" height="1440" />
+              <img src="static/img/cherry-800.webp" loading="lazy" alt="Wave 7"
+                   width="1440" height="1440"
+                   srcset="static/img/cherry-400.webp 400w, static/img/cherry-800.webp 800w, static/img/cherry-1000.webp 1000w"
+                   sizes="(max-width: 600px) 100vw, 385px" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="static/img/chill.webp" loading="lazy" alt="Wave 8" width="1440" height="1440" />
+              <img src="static/img/chill-800.webp" loading="lazy" alt="Wave 8"
+                   width="1440" height="1440"
+                   srcset="static/img/chill-400.webp 400w, static/img/chill-800.webp 800w, static/img/chill-1000.webp 1000w"
+                   sizes="(max-width: 600px) 100vw, 385px" />
             </a>
           </li>
         </ul>
@@ -699,4 +755,16 @@
       </div>
     </footer>
   </body>
-</html>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(reg) {
+          // registration successful
+          console.log('ServiceWorker registrado con alcance:', reg.scope);
+        }).catch(function(err) {
+          console.log('Error al registrar ServiceWorker:', err);
+        });
+      });
+    }
+  </script>
+ </html>
