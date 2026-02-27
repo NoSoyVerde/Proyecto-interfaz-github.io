@@ -1,3 +1,33 @@
+/* header styles (desktop + mobile) */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  padding: 15px 0;
+}
+
+.header .container { max-width: 100%; padding: 0 25px; }
+
+.header .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 0 5px; }
+
+.header .nav-left { display: flex; align-items: center; gap: 25px; margin-right: auto; }
+
+.header .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--white); }
+.header .logo .logo-text { font-size: 18px; font-weight: 600; letter-spacing: 2px; color: var(--white); }
+
+.header .nav-search { background: none; border: none; color: var(--white); font-size: 14px; cursor: pointer; opacity: 0.9; }
+
+.header .menu-checkbox { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.header .menu { display: flex; list-style: none; gap: 5px; margin: 0; padding: 0; }
+
+.header .nav-right { display: flex; align-items: center; gap: 20px; }
+.header .cart-count { background: var(--white); color: #333; font-size: 10px; font-weight: 600; width: 18px; height: 18px; border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+.header .menu-toggle { display: none; color: var(--white); font-size: 22px; cursor: pointer; padding: 5px; }
+
 /* Critical CSS moved from index.html inlined block */
 @font-face {
   font-family: 'Poppins';
