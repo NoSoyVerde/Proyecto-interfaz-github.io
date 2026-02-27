@@ -1142,3 +1142,25 @@ body > :not(.products-section):not(.features-bar):not(.browse-section):not(.late
     .hero-buttons { justify-content: flex-start; }
   }
 }
+
+/* improve readability of newsletter/signup buttons */
+.newsletter-form button,
+.footer-newsletter button {
+  background: #005a76; /* darker blue for sufficient contrast against white text */
+  color: var(--white);
+}
+
+/* ensure footer bottom text/link contrast */
+.footer-bottom {
+  background: #222;
+  color: var(--access-muted); /* light grey for better contrast */
+}
+.footer-bottom .footer-nav a {
+  color: var(--access-muted);
+}
+.footer-bottom .footer-nav a:hover {
+  color: var(--white);
+}
+.footer-bottom .copyright {
+  color: var(--access-muted);
+}
