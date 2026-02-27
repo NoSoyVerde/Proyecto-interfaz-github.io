@@ -1,9 +1,9 @@
 // simple service worker with aggressive caching for static resources
 const CACHE_NAME = 'flatsome-static-v1';
 const PRECACHE_URLS = [
-  '/',
-  '/index.html',
-  '/static/styles/styles.min.css'
+  './',
+  './index.html',
+  './static/styles/styles.min.css'
 ];
 
 self.addEventListener('install', event => {
@@ -24,20 +24,22 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  const url = new URL(event.request.url);
-  // only handle same-origin requests under /static/
-  if (url.origin === location.origin && url.pathname.startsWith('/static/')) {
-    event.respondWith(
-      caches.match(event.request).then(cached => {
-        if (cached) {
-          return cached;
-        }
-        return fetch(event.request).then(resp => {
-          const copy = resp.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
-          return resp;
-        });
-      })
-    );
+  // cache-first strategy for anything under /static/ or images
+  const req = event.request;
+  const url = new URL(req.url);
+  // ignore cross-origin requests (fonts/images might be external though) - only cache same origin
+  if (url.origin === location.origin) {
+    if (url.pathname.includes('/static/') || url.pathname.match(/\.(png|jpg|jpeg|webp|svg)$/)) {
+      event.respondWith(
+        caches.match(req).then(cached => {
+          if (cached) return cached;
+          return fetch(req).then(resp => {
+            // put copy in cache
+            caches.open(CACHE_NAME).then(cache => cache.put(req, resp.clone()));
+            return resp;
+          });
+        })
+      );
+    }
   }
 });
